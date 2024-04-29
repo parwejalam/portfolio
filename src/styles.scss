@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+// src/styles.scss
+:root {
+    --background-color: #fff !important;
+    --text-color: #000 !important;
+  }
+  
+  body.light {
+    --background-color: #f8f0f0 !important;
+    --text-color: #000 !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  body.dark {
+    --background-color: rgba(27,36,45,255) !important;
+    --text-color: #fff !important;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+  }
+ 
+  
+  
