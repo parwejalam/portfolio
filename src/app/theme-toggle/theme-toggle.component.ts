@@ -2,6 +2,8 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../theme.service';
 
+
+
 @Component({
   selector: 'app-theme-toggle',
   templateUrl: './theme-toggle.component.html',
@@ -18,9 +20,13 @@ export class ThemeToggleComponent {
     this.themeService.toggleTheme();
     this.updateIcon();
   }
-
   updateIcon(): void {
     this.themeIcon =
       this.themeService.getTheme() === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+      
   }
+
+  
+
+ 
 }

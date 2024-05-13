@@ -1,0 +1,9 @@
+<h1 class="text-danger text-center my-5"> <u>Projects</u></h1>
+<div class="projects  d-flex flex-wrap px-5 ">
+
+    <div class=" card col-12 col-md-3 bg-image hover-zoom text-center mx-0 mx-md-5  mb-5"  *ngFor="let project of projects">
+        <a href="{{project.link}}">
+            <img src="{{project.src}}" width="100%">
+        </a>
+    </div>
+</div>

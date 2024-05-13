@@ -5,18 +5,38 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { SkillComponent } from './skill/skill.component';
+import { ProjectComponent } from './project/project.component';
+import { ContactComponent } from './Contact/contact.component';
+// import {NgsRevealModule} from 'ngx-scrollreveal';
+
+
+// particles
+import { NgxParticlesModule } from "@tsparticles/angular";
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    HomeComponent,
+    AboutComponent,
+    SkillComponent,
+    ProjectComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxParticlesModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
