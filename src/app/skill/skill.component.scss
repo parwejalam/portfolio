@@ -1,10 +1,13 @@
 .skills_bar {
     position: absolute;
     left: 0;
-    bottom: -10px;
-    background-color:rgb(207, 31, 31);
+    bottom: -2px;
+    background-color: rgb(207, 31, 31);
     height: 0.25rem;
     border-radius: 0.5rem;
     // z-index: -10;
     width: 100%;
+}
+.height:hover{
+    height: 182px;
 }

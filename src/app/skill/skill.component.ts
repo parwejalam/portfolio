@@ -9,7 +9,7 @@ export class SkillComponent {
   skills = [
     {
       name: 'Angular',
-      dec: '',
+      // dec: '',
       icon: 'fa-brands fa-angular fa-bounce',
       color: '#ff0000',
     },

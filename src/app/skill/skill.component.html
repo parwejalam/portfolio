@@ -1,12 +1,15 @@
-<h1 class="text-danger text-center mb-5"> <u> Skills</u></h1>
+<div id="skills ">
+    <h1 class="text-danger text-center mb-5"> <u> Skills</u></h1>
 
-<div class="d-md-flex flex-wrap ">
+    <div class="d-md-flex flex-wrap ">
 
-    <div class="card bg-transparent col-12 col-md-5 mx-0 mx-md-5 align-self-center fs-4 text-center  mb-3  wow slideInLeft"  *ngFor="let skill of skills"  data-wow-duration="2s" data-wow-delay="5s">
-        <div class="" >
-            <i class="{{skill.icon}}"></i>
-            <span >{{skill.name}}</span>
-            <div class="skills_bar "></div>
+        <div class="card  col-12 col-md-5 mx-0 mx-md-5 align-self-center fs-4 text-center  mb-3  wow slideInLeft"
+            *ngFor="let skill of skills" data-wow-duration="2s" data-wow-delay="5s">
+            <div class="height">
+                <i class="{{skill.icon}}"></i>
+                <span>{{skill.name}}</span>
+                <div class="skills_bar"></div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,37 +1,22 @@
+<!-- Ngx Particles -->
 <ngx-particles class="particles" id="tsparticles" [options]="particlesOptions" *ngIf="particlesVisible"></ngx-particles>
-<nav class=" sticky-top bg-dark navbar h-top d-flex flex-wrap justify-content-between  py-2 px-3 ">
 
-
-
-  <ul class="nav col-12 col-md-auto fs-5 justify-content-center mb-md-0">
-    <li>
-      <strong class="text-white"> Parwej's Portfolio</strong>
-    </li>
-  </ul>
-
-
-
-  <ul class="nav d-flex ">
-    <li class="nav-item ">
-      <a class="nav-link " aria-current="page" routerLink="/home">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/about">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/skill">Skills</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/project">Projects</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/contact">Contact</a>
-    </li>
-    <li class="nav-item">
-      <button class="btn btn-outline-secondary" (click)=" toggleParticlesClick();toggleTheme();"> <i [class]="themeIcon"></i>
-      </button>
-    </li>
-
-  </ul>
-
+<!-- NavBar -->
+<nav class="h-top sticky-top navbar navbar-expand-lg  py-2 pe-3 ps-1 bg-dark">
+  <div class="mainName">
+    <button class="navbar-toggler custom-toggler text" type="button" (click)="toggleNav()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon ms-0"></span>
+    </button>
+    <strong class="navbar-brand text-white ms-2">Parwej's Portfolio</strong>
+  </div>
+  <div class="collapse navbar-collapse" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngFor="let link of navLinks">
+        <a class="nav-link" href="{{link.id}}" (click)="toggleNav()">{{link.label}}</a>
+      </li>
+    </ul>
+  </div>
+  <button class="btn btn-outline-secondary ms-2" (click)=" toggleParticlesClick();toggleTheme();"> <i
+    [class]="themeIcon"></i>
+</button>
 </nav>

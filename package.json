@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@fortawesome/angular-fontawesome": "^0.14.1",
     "@tsparticles/angular": "^3.0.0",
     "@tsparticles/configs": "^3.3.0",
     "@tsparticles/engine": "^3.3.0",

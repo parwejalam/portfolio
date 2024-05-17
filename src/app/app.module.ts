@@ -16,6 +16,9 @@ import { ContactComponent } from './Contact/contact.component';
 // particles
 import { NgxParticlesModule } from "@tsparticles/angular";
 import { FormsModule } from '@angular/forms';
+// for Icon
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
@@ -27,16 +30,16 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     SkillComponent,
     ProjectComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxParticlesModule,
     FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

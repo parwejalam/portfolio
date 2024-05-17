@@ -3,10 +3,14 @@
     padding-left: 9rem !important;
     padding-right: 0 !important;
 }
+.imgPositation{
+    position: relative;
+    left: 30%;
+}
 
 @media  (max-width: 768px) {
-    .px-md-5{
-        padding-top: 2rem !important;
-        padding-left: 2rem !important;
+    .imgPositation{
+        position: relative;
+        left: 26%;
     }
 }

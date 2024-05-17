@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ThemeService } from '../theme.service';
 
 // particles
@@ -13,20 +13,21 @@ import { NgParticlesService } from '@tsparticles/angular';
   styleUrls: ['./top-nav.component.scss'],
 })
 export class TopNavComponent implements OnInit {
-  link = [
-    {
-      home: 'Home',
-      about: 'About',
-      project: 'Prjects',
-    },
-    {
-      link1: '/home',
-      link2: '/about',
-    },
-    {
-      link: '/project',
-    },
-  ];
+
+ // NavBarCollapes
+ isNavbarCollapsed = false;
+ navLinks = [
+   {label: 'Home', id: '#home'},
+   {label: 'About', id: '#about'},
+   {label: 'Skills', id: '#skills'},
+   {label: 'Projects', id: '#projects'},
+   {label: 'Contact', id: '#contact'},
+  
+ ];
+
+ toggleNav() {
+   this.isNavbarCollapsed = !this.isNavbarCollapsed;
+ }
 
   // theme methods and services
   themeIcon?: string;
@@ -53,7 +54,7 @@ export class TopNavComponent implements OnInit {
   particlesVisible = true;
   fireworksVisible = false;
   confettiVisible = false;
-  particlesOptions: ISourceOptions = configs.delay; //delay,motionDisable, grabRandomColor,linkTriangles,repulseBack
+  particlesOptions: ISourceOptions = configs.repulseBack; //delay,motionDisable, grabRandomColor,linkTriangles,repulseBack
 
   // constructor(private ngParticlesService: NgParticlesService) {}
 
@@ -94,4 +95,5 @@ export class TopNavComponent implements OnInit {
   public particlesLoaded(container: Container): void {
     console.log('loaded', container);
   }
+
 }
