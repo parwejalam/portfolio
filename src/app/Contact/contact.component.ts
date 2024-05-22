@@ -62,4 +62,33 @@ export class ContactComponent {
         this.showAlert = true;
         this.hideAlert();
       }
+
+      // List for Social Icon
+      socialIcons =[
+        {
+          name: 'facebook',
+          link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+          icon: 'bootstrapFacebook'
+        },
+        {
+          name: 'Instagram',
+          link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+          icon: ''
+        },
+        {
+          name: 'Linkdin',
+          link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+          icon: ''
+        },
+        {
+          name: 'github',
+          link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+          icon: ''
+        },
+        {
+          name: 'twitter',
+          link: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+          icon: ''
+        },
+      ]
 }

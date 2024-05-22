@@ -19,7 +19,8 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
-    "@fortawesome/angular-fontawesome": "^0.14.1",
+    "@ng-icons/core": "^27.4.0",
+    "@ng-icons/heroicons": "^27.4.0",
     "@tsparticles/angular": "^3.0.0",
     "@tsparticles/configs": "^3.3.0",
     "@tsparticles/engine": "^3.3.0",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.14",
     "@angular/compiler-cli": "^16.2.0",
+    "@types/aos": "^3.0.7",
     "@types/jasmine": "~4.3.0",
     "@types/scrollreveal": "^0.0.11",
     "jasmine-core": "~4.6.0",
