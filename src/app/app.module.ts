@@ -16,6 +16,8 @@ import { ContactComponent } from './Contact/contact.component';
 import { NgxParticlesModule } from "@tsparticles/angular";
 import { FormsModule } from '@angular/forms';
 // for Icon
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 
 
 
@@ -35,6 +37,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     NgxParticlesModule,
     FormsModule,
+    FontAwesomeModule,
+    MdbCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

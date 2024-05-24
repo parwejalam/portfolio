@@ -1,11 +1,12 @@
 <div id="projects">
-<h1 class="text-danger text-center my-5"> <u>Projects</u></h1>
-<div class="projects  d-flex flex-wrap px-5 ">
-
-    <div class=" card col-12 col-md-3 bg-image hover-zoom text-center mx-0 mx-md-5  mb-5"  *ngFor="let project of projects">
-        <a href="{{project.link}}">
-            <img src="{{project.src}}" width="100%">
-        </a>
+    
+    <div class="carousel-inner rounded-5 my-5">
+        <h1 class="text-danger text-center my-5"> <u>Projects</u></h1>
+        <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'" [interval]="2500"
+            class="mx-4 m-md-5 rounded-5">
+            <mdb-carousel-item *ngFor="let project of projects">
+                <img src="{{project.src}}" class="d-block w-100" />
+            </mdb-carousel-item>
+        </mdb-carousel>
     </div>
-</div>
 </div>

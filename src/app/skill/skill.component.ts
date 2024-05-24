@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IconsService } from '../services/icons.service';
 
 @Component({
   selector: 'app-skill',
@@ -6,37 +7,38 @@ import { Component } from '@angular/core';
   styleUrls: ['./skill.component.scss'],
 })
 export class SkillComponent {
+  constructor(private icon : IconsService) {}
   skills = [
     {
       name: 'Angular',
       // dec: '',
-      icon: 'fa-brands fa-angular fa-bounce',
+      icon: this.icon.Angular,
       color: '#ff0000',
     },
     {
       name: 'Angular Material',
-      icon: 'fa-brands fa-angular',
+      icon: this.icon.Angular,
       color: '#ff0000',
     },
     {
       name: 'Bootstrap',
-      icon: 'fa-brands fa-bootstrap fa-beat',
+      icon: this.icon.Bootstrap,
       color: '#74C0FC',
     },
 
     {
       name: 'javaScript',
-      icon: 'fa-brands fa-js fa-beat ',
+      icon: this.icon.JavaScript,
       color: '#5b5757',
     },
     {
       name: 'CSS',
-      icon: 'fa-brands fa-css3-alt',
+      icon: this.icon.CSS,
       color: '#5b5757',
     },
     {
       name: 'POSTGRESQL',
-      icon: 'fa-brands fa-html5',
+      icon: this.icon.Postgresql,
       color: '#5b5757',
     },
   ];

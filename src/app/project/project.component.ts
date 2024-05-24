@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { AppModule } from '../app.module';
-
+import { Component } from '@angular/core'
 declare var ScrollReveal: any;
 @Component({
   selector: 'app-project',
@@ -15,24 +13,13 @@ export class ProjectComponent  {
       link:''
     },
     {
-      src:'assets/projects/AMS.png',
+      src:'assets/projects/taskTracker.png',
       link:''
     },
     {
       src:'assets/projects/AMS.png',
       link:''
     },
-    {
-      src:'assets/projects/AMS.png',
-      link:''
-    },
-    {
-      src:'assets/projects/AMS.png',
-      link:''
-    },
-    {
-      src:'assets/projects/AMS.png',
-      link:''
-    }
+    
   ]
 }
