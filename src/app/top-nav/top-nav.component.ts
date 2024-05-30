@@ -54,7 +54,7 @@ export class TopNavComponent implements OnInit {
   particlesVisible = true;
   fireworksVisible = false;
   confettiVisible = false;
-  particlesOptions: ISourceOptions = configs.repulseBack; //delay,motionDisable, grabRandomColor,linkTriangles,repulseBack
+  particlesOptions: ISourceOptions = configs.delay; //delay,motionDisable, grabRandomColor,linkTriangles,repulseBack
 
   // constructor(private ngParticlesService: NgParticlesService) {}
 

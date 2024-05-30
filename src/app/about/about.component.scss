@@ -14,3 +14,19 @@
         left: 26%;
     }
 }
+ul li{
+    list-style: none;
+}
+span{
+    color: #dd0f24;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+.tab-links {
+    cursor: pointer;
+  }
+  
+  .tab-links.active {
+    font-weight: bold;
+    // color: blue; /* Or any other styles to highlight the active tab */
+  }

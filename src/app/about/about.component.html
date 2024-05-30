@@ -8,15 +8,47 @@
         <div class="textCon col-12 col-md-6 p-4 text-center text-md-start px-md-5 mt-5 ">
             <h3>Hello</h3>
             <p>
-                Hard working software engineering student from Zenica in my 
-                third and final year. I'm also a former Pharmacy technician 
-                and a future full stack developer. I’ve found my passion in 
-                web development. I love spending time coding and 
-                encountering new challenges. I’m highly adaptable to new 
-                challenges and projects. I'm a Junior Scholar at Bosnia and 
-                Herzegovina Futures foundation and that is the best thing that 
-                happened to me.
+                As a dedicated software engineering student at <span class="text-danger">IGNOU</span>, now in my third
+                and final year, I am passionate about web development and Android app development. I am on my way to
+                becoming a proficient full stack developer. My journey has fueled a deep love for coding and tackling
+                new challenges. With a strong adaptability to new projects and technologies, I am eager to apply my
+                skills as an Angular developer and continue to grow in this exciting field.
             </p>
+
+            <div class="tabTitle d-flex text-danger justify-content-center fs-4">
+                <p class="tab-links me-5 " (click)="showContent('education')"
+                    [class.active]="activeTab === 'education'">Education</p>
+                <!-- <p class="tab-links ms-5" (click)="showContent('experience')"
+                    [class.active]="activeTab === 'experience'">Exprience</p> -->
+            </div>
+            <div class="tab-content" *ngIf="activeTab === 'education'" id="Education">
+                <ul>
+                    <li>
+                        <span>BCA</span> From Indra Gandhi National Open University, New Delhi 2023
+                    </li>
+                    <li>
+                        <span>XIIth</span> From Z.A Islamia PG Collage,BSEB Board 2019
+                    </li>
+                    <li>
+                        <span>Xth</span> From SKBBS High School, BSEB Board 2017
+                    </li>
+                </ul>
+
+            </div>
+            <div class="tab-content" *ngIf="activeTab === 'experience'" id="Exprience">
+                <ul>
+                    <li>
+                        <span class="text-danger">Company Name:-</span> <br> Noble Wave
+                    </li>
+                    <li>
+                        <span class="text-danger"> Designition:- </span> <br> Junior Software Developer
+                    </li>
+                    <li>
+                        <span class="text-danger"> Duration:- </span><br> November 2023 to present
+                    </li>
+                </ul>
+
+            </div>
         </div>
     </div>
-</div   >
+</div>

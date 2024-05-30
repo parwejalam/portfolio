@@ -10,7 +10,6 @@ import { AboutComponent } from './about/about.component';
 import { SkillComponent } from './skill/skill.component';
 import { ProjectComponent } from './project/project.component';
 import { ContactComponent } from './Contact/contact.component';
-// import {NgsRevealModule} from 'ngx-scrollreveal';
 
 
 // particles
@@ -18,6 +17,7 @@ import { NgxParticlesModule } from "@tsparticles/angular";
 import { FormsModule } from '@angular/forms';
 // for Icon
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 
 
 
@@ -37,7 +37,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     NgxParticlesModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MdbCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
