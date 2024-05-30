@@ -1,0 +1,1 @@
+import{d as a}from"./chunk-KFZQC3P5.js";function t(e,n=!0){return a(this,null,function*(){let{LineDrawer:i}=yield import("./chunk-JSQI5PPE.js");yield e.addShape("line",new i,n)})}export{t as loadLineShape};

@@ -1,0 +1,1 @@
+import{a as n}from"./chunk-R3JPMZDA.js";import{d as t}from"./chunk-KFZQC3P5.js";function c(r,a=!0){return t(this,null,function*(){yield r.addInteractor("externalAttract",o=>t(this,null,function*(){let{Attractor:e}=yield import("./chunk-2TEK6OYJ.js");return new e(r,o)}),a)})}export{n as Attract,c as loadExternalAttractInteraction};

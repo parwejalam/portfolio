@@ -1,0 +1,1 @@
+import{d as r}from"./chunk-KFZQC3P5.js";function n(t,o=!0){return r(this,null,function*(){yield t.addParticleUpdater("strokeColor",a=>r(this,null,function*(){let{StrokeColorUpdater:e}=yield import("./chunk-D7EFTTFH.js");return new e(a)}),o)})}export{n as loadStrokeColorUpdater};

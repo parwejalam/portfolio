@@ -1,0 +1,1 @@
+import"./chunk-KFZQC3P5.js";function n(e){let{context:t,particle:s,radius:a}=e,i=s.shapeData,o=0;t.moveTo(-a,o),t.lineTo(a,o),t.lineCap=i?.cap??"butt"}var c=1,r=class{draw(t){n(t)}getSidesCount(){return c}};export{r as LineDrawer};

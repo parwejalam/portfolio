@@ -1,0 +1,1 @@
+import{d as a}from"./chunk-KFZQC3P5.js";function n(t,e=!0){return a(this,null,function*(){yield t.addParticleUpdater("wobble",r=>a(this,null,function*(){let{WobbleUpdater:o}=yield import("./chunk-4BNLP3XC.js");return new o(r)}),e)})}export{n as loadWobbleUpdater};

@@ -1,0 +1,1 @@
+import{d as a}from"./chunk-KFZQC3P5.js";function n(t,r=!0){return a(this,null,function*(){let{StarDrawer:e}=yield import("./chunk-BYZ2ALQB.js");yield t.addShape("star",new e,r)})}export{n as loadStarShape};

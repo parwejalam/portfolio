@@ -1,0 +1,1 @@
+var s=class{constructor(){this.opacity=.5}load(i){i&&i.opacity!==void 0&&(this.opacity=i.opacity)}};var t=class{constructor(){this.distance=80,this.links=new s,this.radius=60}load(i){i&&(i.distance!==void 0&&(this.distance=i.distance),this.links.load(i.links),i.radius!==void 0&&(this.radius=i.radius))}};export{s as a,t as b};

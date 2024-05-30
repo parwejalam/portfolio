@@ -1,0 +1,1 @@
+import{d as n}from"./chunk-KFZQC3P5.js";function l(i,a=!0){return n(this,null,function*(){let{LinksPlugin:t}=yield import("./chunk-3SHQ3YGR.js"),u=new t;yield i.addPlugin(u,a)})}export{l as loadLinksPlugin};
