@@ -5,24 +5,24 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ThemeService {
-  private theme: 'light' | 'dark' = 'light';
+  private theme: 'light' | 'dark' = 'dark';
 
   constructor() {
     this.loadTheme();
   }
 
   toggleTheme(): void {
-    this.theme = this.theme === 'light' ? 'dark' : 'light';
+    this.theme = this.theme === 'dark' ? 'light' : 'dark';
     this.applyTheme();
   }
 
-  getTheme(): 'light' | 'dark' {
+  getTheme(): 'dark' | 'light' {
     return this.theme;
   }
 
   private applyTheme(): void {
     document.body.className = this.theme;
-    localStorage.setItem('theme', this.theme);
+    // localStorage.setItem('theme', this.theme);
   }
 
   private loadTheme(): void {

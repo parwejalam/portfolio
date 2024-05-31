@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../theme.service';
 
 // particles
@@ -50,8 +50,6 @@ export class TopNavComponent implements OnInit {
   id = 'tsparticles';
   fire = 0;
   particlesVisible = true;
-  fireworksVisible = false;
-  confettiVisible = false;
   particlesOptions: ISourceOptions = configs.linkTriangles; //delay,motionDisable, grabRandomColor,linkTriangles,repulseBack
 
   // constructor(private ngParticlesService: NgParticlesService) {}
@@ -69,18 +67,18 @@ export class TopNavComponent implements OnInit {
     this.particlesVisible = !this.particlesVisible;
   }
 
-  toggleFireworksClick(): void {
-    console.log('fireworks clicked');
+  // toggleFireworksClick(): void {
+  //   console.log('fireworks clicked');
 
-    this.fireworksVisible = !this.fireworksVisible;
-  }
+  //   this.fireworksVisible = !this.fireworksVisible;
+  // }
 
-  toggleConfettiClick(): void {
-    console.log('confetti clicked');
+  // toggleConfettiClick(): void {
+  //   console.log('confetti clicked');
 
-    this.fire = Math.random() + 1;
-    this.confettiVisible = !this.confettiVisible;
-  }
+  //   this.fire = Math.random() + 1;
+  //   this.confettiVisible = !this.confettiVisible;
+  // }
 
   ngOnInit(): void {
     void this.ngParticlesService.init(async (engine: Engine) => {
