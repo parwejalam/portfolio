@@ -1,10 +1,10 @@
 {
-  "name": "parwejalam.github.io",
+  "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/parwejalam.github.io/ --deploy-url=/parwejalam.github.io/",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
