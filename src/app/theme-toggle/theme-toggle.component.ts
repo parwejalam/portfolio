@@ -1,6 +1,6 @@
 // src/app/theme-toggle/theme-toggle.component.ts
 import { Component } from '@angular/core';
-import { ThemeService } from '../theme.service';
+import { ThemeService } from '../services/theme.service';
 
 
 

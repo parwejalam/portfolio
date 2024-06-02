@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from '../theme.service';
+import { ThemeService } from '../services/theme.service';
 
 // particles
 import type { Container, Engine, ISourceOptions } from '@tsparticles/engine';
@@ -54,12 +54,12 @@ export class TopNavComponent implements OnInit {
 
   // constructor(private ngParticlesService: NgParticlesService) {}
 
-  confettiOptions = {
-    particleCount: 1000,
-    spread: 10,
-    origin: { y: 0.6 },
-  };
-  fireworksOptions = {};
+  // confettiOptions = {
+  //   particleCount: 1000,
+  //   spread: 10,
+  //   origin: { y: 0.6 },
+  // };
+  // fireworksOptions = {};
 
   toggleParticlesClick(): void {
     console.log('particles clicked');
