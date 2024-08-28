@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 // for Icon
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { ScrollOnTopDirective } from './Directives/scroll-on-top.directive';
+import { SpinDirective } from './Directives/spin.directive';
 
 
 
@@ -31,6 +33,8 @@ import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
     SkillComponent,
     ProjectComponent,
     ContactComponent,
+    ScrollOnTopDirective,
+    SpinDirective
   ],
   imports: [
     BrowserModule,
