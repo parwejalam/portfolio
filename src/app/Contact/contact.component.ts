@@ -13,6 +13,7 @@ export class ContactComponent {
   // iconsi
   icon = this.icons.PaperPlane;
   socialIcons = this.icons.socialIcons;
+  currentYear = new Date().getFullYear();
 
   private color: string = '';
   showAlert: boolean = false;
@@ -44,8 +45,9 @@ export class ContactComponent {
     formData.append('body', this.contactFormValues.body);
     // -- email customization
     formData.append('access_key', this.mailService.form_access_key);
-    formData.append('subject', 'Email Support From Your Site');
-    formData.append('from_name', 'Contact Notification');
+    formData.append('subject', 'Email from Portfolio');
+    formData.append('reply_to', this.contactFormValues.email);
+    formData.append('from_name', 'Portfolio');
 
     try {
       // -- send email
