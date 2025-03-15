@@ -51,7 +51,7 @@ export class TopNavComponent implements OnInit {
   id = 'tsparticles';
   fire = 0;
   particlesVisible = true;
-  particlesOptions: ISourceOptions = configs.delay; //delay,motionDisable, grabRandomColor,linkTriangles,repulseBack
+  particlesOptions: ISourceOptions = configs.moveAngle; //delay,motionDisable, grabRandomColor,linkTriangles,repulseBack
 
   configPart = [
     { label: 'Triangles', value: configs.linkTriangles },

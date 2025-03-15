@@ -5,7 +5,7 @@
   <div class="d-md-flex">
 
     <div class="col-9 col-md-2 offset-3 offset-md-2">
-      <h1 class=" mb-5">Contect me!</h1>
+      <h1 class=" mb-5">Get in touch with me!</h1>
       <p class=" my-5"><fa-icon [icon]="icon"></fa-icon> parwejalamgt&#64;gmail.com</p>
       <div class="d-flex  my-5 ">
         <div class="socialIcon px-2" *ngFor=" let  social of socialIcons">
@@ -86,6 +86,6 @@
         <a href="{{social.link}}"><fa-icon class="fs-4 fs-4h" [icon]="social.icon"></fa-icon></a>
       </div>
     </div>
-    <cite>&copy; 2024 copyright all right reserved</cite>
+    <cite>&copy; {{currentYear}} copyright all right reserved</cite>
   </footer>
 </div>

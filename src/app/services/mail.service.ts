@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class MailService {
   constructor() {}
-  form_access_key = "705d2e0e-488d-4a47-b6d6-f3c9196f35ee"
+  // Acess key for parwejalamgt@gmail.com
+  form_access_key = "88afd5ae-46af-47ee-9826-851b902c7ad6"
 
   sendEmail(formData: FormData): Promise<Response> {
     return fetch('https://api.web3forms.com/submit', {
