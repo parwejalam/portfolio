@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:all": "ng serve --host 0.0.0.0 --port 4203",
     "build": "ng build --base-href=/portfolio/ --deploy-url=/portfolio/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

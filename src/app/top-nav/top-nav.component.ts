@@ -201,9 +201,9 @@ export class TopNavComponent implements OnInit {
 
   ngOnInit(): void {
     void this.ngParticlesService.init(async (engine: Engine) => {
-      console.log('init', engine);
+      console.log('Particals', engine);
 
-      await loadFull(engine);
+       loadFull(engine);
     });
   }
 
