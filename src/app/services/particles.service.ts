@@ -1,51 +1,17 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { ThemeService } from '../services/theme.service';
-
-// particles
-import type { Container, Engine, ISourceOptions } from '@tsparticles/engine';
-import { loadFull } from 'tsparticles';
-import configs from '@tsparticles/configs';
+import { ChangeDetectorRef, Injectable } from '@angular/core';
 import { NgParticlesService } from '@tsparticles/angular';
+import configs from '@tsparticles/configs';
+import { ISourceOptions } from '@tsparticles/engine';
 
-@Component({
-  selector: 'app-top-nav',
-  templateUrl: './top-nav.component.html',
-  styleUrls: ['./top-nav.component.scss'],
+@Injectable({
+  providedIn: 'root'
 })
-export class TopNavComponent implements OnInit {
-  // NavBarCollapes
-  isNavbarCollapsed = false;
-  navLinks = [
-    { label: 'Home', id: '#home' },
-    { label: 'About', id: '#about' },
-    { label: 'Skills', id: '#skills' },
-    { label: 'Projects', id: '#projects' },
-    { label: 'Contact', id: '#contact' },
-  ];
-
-  toggleNav() {
-    this.isNavbarCollapsed = !this.isNavbarCollapsed;
-  }
-
-  // theme methods and services
-  themeIcon?: string;
+export class ParticlesService {
 
   constructor(
-    private themeService: ThemeService,
     private ngParticlesService: NgParticlesService,
     private cdr: ChangeDetectorRef
-  ) {
-    this.updateIcon();
-  }
-  // theme = this.themeService.theme;
-  toggleTheme(): void {
-    this.themeService.toggleTheme();
-    this.updateIcon();
-  }
-  updateIcon(): void {
-    this.themeIcon =
-      this.themeService.getTheme() === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-  }
+  ) { }
 
   // particles
   id = 'tsparticles';
@@ -161,7 +127,6 @@ export class TopNavComponent implements OnInit {
     // { label: 'vibrate', value: configs.vibrate },
   ];
 
-  // Prticles dropdown function and more
   particlesChange(event: any) {
     console.log(event.target.selectedIndex);
     let configItem = this.configPart[event.target.selectedIndex];
@@ -172,41 +137,10 @@ export class TopNavComponent implements OnInit {
     this.cdr.detectChanges();
   }
 
-  // constructor(private ngParticlesService: NgParticlesService) {}
-
-  // confettiOptions = {
-  //   particleCount: 1000,
-  //   spread: 10,
-  //   origin: { y: 0.6 },
-  // };
-  // fireworksOptions = {};
-
   toggleParticlesClick(): void {
     console.log('particles clicked');
     this.particlesVisible = !this.particlesVisible;
   }
 
-  // toggleFireworksClick(): void {
-  //   console.log('fireworks clicked');
 
-  //   this.fireworksVisible = !this.fireworksVisible;
-  // }
-
-  // toggleConfettiClick(): void {
-  //   console.log('confetti clicked');
-
-  //   this.fire = Math.random() + 1;
-  //   this.confettiVisible = !this.confettiVisible;
-  // }
-
-  ngOnInit(): void {
-    void this.ngParticlesService.init(async (engine: Engine) => { 
-      console.log('Particals', engine);
-      await loadFull(engine);
-    });
-  }
-
-  public particlesLoaded(container: Container): void {
-    console.log('loaded', container);
-  }
 }
