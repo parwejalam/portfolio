@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { IconsService } from '../services/icons.service';
+import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',
   styleUrls: ['./skill.component.scss'],
+  standalone: true,
+  imports: [CommonModule, FontAwesomeModule]
 })
 export class SkillComponent {
-  constructor(private icon : IconsService) {}
+  constructor(private icon: IconsService) { }
   skills = [
     {
       name: 'Angular',

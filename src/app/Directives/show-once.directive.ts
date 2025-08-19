@@ -10,6 +10,7 @@ import {
 @Directive({
   selector: '[showOnce]',
   exportAs: 'showOnce',
+  standalone: true
 })
 export class ShowOnceDirective {
   key = input('', { alias: 'showOnce' });

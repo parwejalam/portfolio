@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
 import { MailService } from '../services/mail.service';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormsModule } from '@angular/forms';
 import { IconsService } from '../services/icons.service';
+import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
+  standalone: true,
+  imports: [CommonModule, FormsModule, FontAwesomeModule]
 })
 export class ContactComponent {
-  constructor(private mailService: MailService, private icons:IconsService) {}
+  constructor(private mailService: MailService, private icons: IconsService) { }
   // iconsi
   icon = this.icons.PaperPlane;
   socialIcons = this.icons.socialIcons;

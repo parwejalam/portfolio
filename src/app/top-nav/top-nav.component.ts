@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ThemeService } from '../services/theme.service';
+import { CommonModule } from '@angular/common';
+import { NgxParticlesModule } from '@tsparticles/angular';
 
 // particles
 import type { Container, Engine, ISourceOptions } from '@tsparticles/engine';
@@ -11,6 +13,8 @@ import { NgParticlesService } from '@tsparticles/angular';
   selector: 'app-top-nav',
   templateUrl: './top-nav.component.html',
   styleUrls: ['./top-nav.component.scss'],
+  standalone: true,
+  imports: [CommonModule, NgxParticlesModule]
 })
 export class TopNavComponent implements OnInit {
   // NavBarCollapes
@@ -200,7 +204,7 @@ export class TopNavComponent implements OnInit {
   // }
 
   ngOnInit(): void {
-    void this.ngParticlesService.init(async (engine: Engine) => { 
+    void this.ngParticlesService.init(async (engine: Engine) => {
       console.log('Particals', engine);
       await loadFull(engine);
     });
