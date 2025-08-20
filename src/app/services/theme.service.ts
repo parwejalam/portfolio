@@ -22,7 +22,7 @@ export class ThemeService {
 
   private applyTheme(): void {
     document.body.className = this.theme;
-    localStorage.setItem('theme', this.theme);
+    // localStorage.setItem('theme', this.theme);
   }
 
   private loadTheme(): void {
