@@ -28,13 +28,6 @@ export class ThemeService {
   private loadTheme(): void {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme === 'light' || storedTheme === 'dark') {
-
-      if (storedTheme === 'light') {
-        this.theme = storedTheme;
-        this.applyTheme();
-        // this.toggleParticle.toggleParticlesClick()
-
-      }
       this.theme = storedTheme;
       this.applyTheme();
     }
