@@ -1,12 +1,22 @@
 <div id="projects">
-    
+
     <div class="carousel-inner rounded-5 my-5">
         <h1 class="text-danger text-center my-5"> <u>Projects</u></h1>
-        <mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'" [interval]="2500"
+        <!-- <mdb-carousel [controls]="true" [dark]="themeColor" [indicators]="true" [animation]="'slide'" [interval]="2500"
             class="mx-4 m-md-5 rounded-5">
-            <mdb-carousel-item *ngFor="let project of projects">
-                <img src="{{project.src}}" class="d-block w-100" />
+            <mdb-carousel-item *ngFor="let project of projects" class="row ">
+                <img src="{{project.src}}" class="d-block col-md-6 offset-md-3" />
             </mdb-carousel-item>
-        </mdb-carousel>
+        </mdb-carousel> -->
+
+        <swiper-container class="mySwiper" effect="coverflow"
+            grab-cursor="true" slides-per-view="3" coverflow-effect-rotate="40"
+            coverflow-effect-stretch="0" coverflow-effect-depth="500" coverflow-effect-modifier="2"
+            coverflow-effect-slide-shadows="true" mousewheel="true" autoplay="true" loop="true"
+            >
+            <swiper-slide *ngFor="let project of projects">
+                <img src="{{project.src}}" />
+            </swiper-slide>
+        </swiper-container>
     </div>
 </div>

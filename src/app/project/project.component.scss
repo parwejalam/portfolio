@@ -1,0 +1,38 @@
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    // Light theme shadows (dark shadows)
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+swiper-slide:hover {
+    transform: translateY(-4px);
+    // Light theme hover shadows (dark shadows)
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+// Dark theme shadows (light shadows)
+.dark swiper-slide {
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15), 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark swiper-slide:hover {
+    box-shadow: 0 16px 48px rgba(255, 255, 255, 0.25), 0 8px 16px rgba(255, 255, 255, 0.15);
+}
+
+swiper-slide img {
+    width: 100%;
+    height: min-content;
+    display: block;
+    border-radius: 12px;
+}
