@@ -7,6 +7,7 @@ import { SkillComponent } from './skill/skill.component';
 import { ProjectComponent } from './project/project.component';
 import { ContactComponent } from './Contact/contact.component';
 import { ScrollOnTopDirective } from './Directives/scroll-on-top.directive';
+import * as aos from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,11 @@ import { ScrollOnTopDirective } from './Directives/scroll-on-top.directive';
 export class AppComponent {
   title = 'portfolio';
   constructor(private icon: IconsService) { }
+  ngOnInit() {
+    aos.init({
+      duration: 3000,
+    })
+  }
 
 
 }

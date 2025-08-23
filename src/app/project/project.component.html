@@ -9,11 +9,10 @@
             </mdb-carousel-item>
         </mdb-carousel> -->
 
-        <swiper-container class="mySwiper" effect="coverflow"
-            grab-cursor="true" slides-per-view="3" coverflow-effect-rotate="40"
-            coverflow-effect-stretch="0" coverflow-effect-depth="500" coverflow-effect-modifier="2"
-            coverflow-effect-slide-shadows="true" mousewheel="true" autoplay="true" loop="true"
-            >
+        <swiper-container class="mySwiper" effect="coverflow" grab-cursor="true" slides-per-view="3"
+            coverflow-effect-rotate="40" coverflow-effect-stretch="0" coverflow-effect-depth="500"
+            coverflow-effect-modifier="2" coverflow-effect-slide-shadows="true" mousewheel="true" autoplay="true"
+            loop="true" autoplay-delay="1000" autoplay-disable-on-interaction="true">
             <swiper-slide *ngFor="let project of projects">
                 <img src="{{project.src}}" />
             </swiper-slide>
