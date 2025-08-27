@@ -1,54 +1,275 @@
-<div id="about">
-    <h1 class="text-danger text-center mb-5"> <u> About</u></h1>
-    <div class="mainContent d-flex flex-wrap   mt-5">
-        <div class="imgCon col-12 col-md-6  px-0 px-md-5 ">
-            <!-- <img src="assets/image.png" class="imgPositation" width="50%"> -->
+<section id="about" class="py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-4 fw-bold text-danger mb-3">
+                    <span class="position-relative">
+                        About Me
+                        <span class="underline-effect"></span>
+                    </span>
+                </h1>
+                <p class="lead text-muted">Passionate Developer | Problem Solver | Tech Enthusiast</p>
+            </div>
         </div>
 
-        <div class="textCon col-12 col-md-6 p-4 text-center text-md-start px-md-5 mt-5 "  data-aos="zoom-in-right">
-            <h3>Hello</h3>
-            <p>
-                As a dedicated software engineering student at <span class="text-danger">IGNOU</span>, now in my third
-                and final year, I am passionate about web development and Android app development. I am on my way to
-                becoming a proficient full stack developer. My journey has fueled a deep love for coding and tackling
-                new challenges. With a strong adaptability to new projects and technologies, I am eager to apply my
-                skills as an Angular developer and continue to grow in this exciting field.
-            </p>
+        <!-- Main Content -->
+        <div class="row align-items-stretch g-5 min-vh-75">
+            <!-- Profile Image Section - Split Screen Left -->
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200">
+                <div class="position-relative h-100">
 
-            <div class="tabTitle d-flex text-danger justify-content-center fs-4">
-                <p class="tab-links me-5 " (click)="showContent('education')"
-                    [class.active]="activeTab === 'education'">Education</p>
-                <!-- <p class="tab-links ms-5" (click)="showContent('experience')"
-                    [class.active]="activeTab === 'experience'">Exprience</p> -->
+                    <div class="profile-image-container">
+                        <img src="assets/parwej_img.jpg" alt="Parwej Alam" class="profile-image">
+                        <div class="profile-overlay"></div>
+
+                        <!-- Tech Particles -->
+                        <div class="tech-particle"></div>
+                        <div class="tech-particle"></div>
+                        <div class="tech-particle"></div>
+                        <div class="tech-particle"></div>
+
+                        <!-- Corner Accents -->
+                        <div class="corner-accent top-left"></div>
+                        <div class="corner-accent bottom-right"></div>
+                    </div>
+
+                    <!-- Floating Elements -->
+                    <div class="floating-element floating-1" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-code text-danger fs-3"></i>
+                    </div>
+                    <div class="floating-element floating-2" data-aos="fade-up" data-aos-delay="700">
+                        <i class="fas fa-laptop-code text-danger fs-3"></i>
+                    </div>
+                </div>
             </div>
-            <div class="tab-content" *ngIf="activeTab === 'education'" id="Education">
-                <ul>
-                    <li>
-                        <span>BCA</span> From Indra Gandhi National Open University, New Delhi 2023
-                    </li>
-                    <li>
-                        <span>XIIth</span> From Z.A Islamia PG Collage,BSEB Board 2019
-                    </li>
-                    <li>
-                        <span>Xth</span> From SKBBS High School, BSEB Board 2017
-                    </li>
-                </ul>
 
-            </div>
-            <div class="tab-content" *ngIf="activeTab === 'experience'" id="Exprience">
-                <ul>
-                    <li>
-                        <span class="text-danger">Company Name:-</span> <br> Noble Wave
-                    </li>
-                    <li>
-                        <span class="text-danger"> Designition:- </span> <br> Junior Software Developer
-                    </li>
-                    <li>
-                        <span class="text-danger"> Duration:- </span><br> November 2023 to present
-                    </li>
-                </ul>
+            <!-- Content Section - Split Screen Right -->
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
+                <div class="about-content">
+                    <!-- Introduction Card -->
+                    <div class="card border-0 shadow-sm mb-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card-body p-4">
+                            <h3 class="card-title text-danger mb-3">
+                                <i class="fas fa-user me-2"></i>Hello There!
+                            </h3>
+                            <p class="card-text lh-lg">
+                                I'm <strong class="text-danger">Parwej Alam</strong>, a passionate
+                                <span class="badge bg-danger-subtle text-danger">Frontend Developer</span> with
+                                expertise
+                                in Angular, Node.js, and hybrid mobile app development. My journey began as a Software
+                                Engineering student at <strong>IGNOU</strong>, where I discovered my love for building
+                                interactive and scalable applications.
+                            </p>
+                            <p class="card-text lh-lg">
+                                Since then, I've grown into a developer who thrives on solving complex challenges and
+                                delivering clean, efficient solutions. Over the years, I've worked on upgrading Angular
+                                applications to the latest versions, building reusable UI components, and converting web
+                                apps into mobile apps using <span class="text-danger fw-bold">Capacitor and
+                                    Ionic</span>.
+                            </p>
+                            <p class="card-text">
+                                I enjoy creating applications that are responsive, user-friendly, and
+                                performance-driven.
+                                I'm always excited to explore new technologies, improve my craft, and contribute to
+                                projects
+                                that make an impact. For me, coding isn't just about writing logic—it's about building
+                                <strong class="text-danger">meaningful experiences</strong>.
+                            </p>
+                        </div>
+                    </div>
 
+                    <!-- Skills Highlight -->
+                    <div class="row g-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="col-6 col-lg-3">
+                            <div class="skill-badge text-center p-3 rounded-3 border">
+                                <i class="fab fa-angular text-danger fs-4 mb-2 d-block"></i>
+                                <small class="fw-semibold">Angular 18</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="skill-badge text-center p-3 rounded-3 border">
+                                <i class="fab fa-node-js text-success fs-4 mb-2 d-block"></i>
+                                <small class="fw-semibold">Node.js</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="skill-badge text-center p-3 rounded-3 border">
+                                <i class="fas fa-mobile-alt text-info fs-4 mb-2 d-block"></i>
+                                <small class="fw-semibold">Capacitor</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="skill-badge text-center p-3 rounded-3 border">
+                                <i class="fas fa-bolt text-primary fs-4 mb-2 d-block"></i>
+                                <small class="fw-semibold">Ionic 7</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specializations -->
+                    <div class="specializations mb-4" data-aos="fade-up" data-aos-delay="450">
+                        <h5 class="text-danger mb-3">
+                            <i class="fas fa-star me-2"></i>Specializations
+                        </h5>
+                        <div class="row g-2">
+                            <div class="col-12 col-md-6">
+                                <div class="specialization-item p-3 rounded-3 border">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-mobile text-success fs-5 me-3"></i>
+                                        <span class="fw-semibold">Hybrid Mobile App Development with Push
+                                            Notifications</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="specialization-item p-3 rounded-3 border">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-cubes text-warning fs-5 me-3"></i>
+                                        <span class="fw-semibold">Building and customizing reusable Angular
+                                            libraries</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="specialization-item p-3 rounded-3 border">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-cloud-upload-alt text-info fs-5 me-3"></i>
+                                        <span class="fw-semibold">Deployments on Railway, Firebase, and GitHub
+                                            Pages</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabs Section -->
+                    <div class="tabs-container" data-aos="fade-up" data-aos-delay="500">
+                        <div class="tab-navigation mb-4">
+                            <div class="btn-group w-100" role="group">
+                                <button type="button" class="btn btn-outline-danger flex-fill"
+                                    [class.active]="activeTab === 'education'" (click)="showContent('education')">
+                                    <i class="fas fa-graduation-cap me-2"></i>Education
+                                </button>
+                                <button type="button" class="btn btn-outline-danger flex-fill"
+                                    [class.active]="activeTab === 'experience'" (click)="showContent('experience')">
+                                    <i class="fas fa-briefcase me-2"></i>Experience
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content-wrapper">
+                            <!-- Education Tab -->
+                            <div class="tab-content-panel" *ngIf="activeTab === 'education'" [@slideIn]="activeTab">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-header bg-danger text-white">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-graduation-cap me-2"></i>Educational Journey
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="timeline">
+                                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="100">
+                                                <div class="timeline-marker bg-danger"></div>
+                                                <div class="timeline-content">
+                                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                                        <h6 class="fw-bold text-danger mb-0">Bachelor of Computer
+                                                            Applications (BCA)</h6>
+                                                        <span class="badge bg-danger-subtle text-danger">2023</span>
+                                                    </div>
+                                                    <p class="text-muted mb-0">Indira Gandhi National Open University,
+                                                        New Delhi</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                                                <div class="timeline-marker bg-warning"></div>
+                                                <div class="timeline-content">
+                                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                                        <h6 class="fw-bold text-warning mb-0">Higher Secondary (XII)
+                                                        </h6>
+                                                        <span class="badge bg-warning-subtle text-warning">2019</span>
+                                                    </div>
+                                                    <p class="text-muted mb-0">Z.A Islamia PG College, BSEB Board</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="timeline-item" data-aos="fade-left" data-aos-delay="300">
+                                                <div class="timeline-marker bg-info"></div>
+                                                <div class="timeline-content">
+                                                    <div class="d-flex justify-content-between align-items-start mb-1">
+                                                        <h6 class="fw-bold text-info mb-0">Secondary (X)</h6>
+                                                        <span class="badge bg-info-subtle text-info">2017</span>
+                                                    </div>
+                                                    <p class="text-muted mb-0">SKBBS High School, BSEB Board</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experience Tab -->
+                            <div class="tab-content-panel" *ngIf="activeTab === 'experience'" [@slideIn]="activeTab">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="mb-0">
+                                            <i class="fas fa-briefcase me-2"></i>Professional Experience
+                                        </h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="experience-item">
+                                            <div class="row align-items-center">
+                                                <div class="col-md-8">
+                                                    <h5 class="text-success fw-bold mb-2">Junior Software Developer</h5>
+                                                    <h6 class="text-danger mb-3">Noble Wave</h6>
+                                                    <p class="text-muted mb-0">
+                                                        <i class="fas fa-calendar-alt me-2"></i>
+                                                        November 2023 - Present
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4 text-md-end">
+                                                    <div class="experience-badge">
+                                                        <span class="badge bg-success-subtle text-success fs-6 p-2">
+                                                            Current Role
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="my-3">
+                                            <div class="responsibilities">
+                                                <h6 class="text-muted mb-2">Key Responsibilities:</h6>
+                                                <ul class="list-unstyled">
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                                        Frontend development using Angular framework
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                                        Collaborative software development in team environment
+                                                    </li>
+                                                    <li class="mb-2">
+                                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                                        Code optimization and debugging
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#contact" class="btn btn-danger btn-lg px-4 py-2 rounded-pill">
+                            <i class="fas fa-envelope me-2"></i>Get In Touch
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
