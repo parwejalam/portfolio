@@ -1,11 +1,7 @@
 <div class="mainSection d-flex flex-wrap position-relative" id="home">
     <!-- Particles Background for Home Section Only -->
-    <ngx-particles 
-        class="home-particles" 
-        [id]="particlesId" 
-        [options]="particlesOptions" 
-        (particlesLoaded)="particlesLoaded($event)"
-        *ngIf="particlesVisible">
+    <ngx-particles class="home-particles" [id]="particlesId" [options]="particlesOptions"
+        (particlesLoaded)="particlesLoaded($event)" *ngIf="particlesVisible">
     </ngx-particles>
 
     <!-- Particles Control Panel -->
@@ -16,8 +12,8 @@
                     {{part.label}}
                 </option>
             </select>
-            <button class="btn btn-sm btn-outline-light particle-toggle" (click)="toggleParticlesClick()" 
-                    [title]="particlesVisible ? 'Hide Particles' : 'Show Particles'">
+            <button class="btn btn-sm btn-outline-light particle-toggle" (click)="toggleParticlesClick()"
+                [title]="particlesVisible ? 'Hide Particles' : 'Show Particles'">
                 <i class="fas fa-eye" *ngIf="particlesVisible"></i>
                 <i class="fas fa-eye-slash" *ngIf="!particlesVisible"></i>
             </button>
@@ -43,7 +39,7 @@
     <div class="imgContent col-12 align-self-center col-md-5 ms-md-0">
         <div>
 
-            <img src="assets/parwej.png"   width="100%">
+            <!-- <img src="assets/parwej.png"   width="100%"> -->
         </div>
     </div>
 </div>

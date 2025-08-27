@@ -23,7 +23,7 @@ import { Subscription } from 'rxjs';
 export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   title = 'angular';
   private themeSubscription: Subscription = new Subscription();
-  
+
   constructor(
     private icons: IconsService,
     private ngParticlesService: NgParticlesService,
@@ -58,7 +58,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
       },
       modes: {
         push: {
-          quantity: 4,
+          quantity: 10,
         },
         repulse: {
           distance: 200,
@@ -78,20 +78,20 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
         width: 1,
       },
       move: {
-        direction: "none",
+        direction: "inside",
         enable: true,
         outModes: {
           default: "bounce",
         },
         random: false,
-        speed: 2,
+        speed: 3,
         straight: false,
       },
       number: {
         density: {
           enable: true,
         },
-        value: 80,
+        value: 200,
       },
       opacity: {
         value: 0.5,
@@ -108,6 +108,8 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
   configPart = [
     { label: 'Default Links', value: this.particlesOptions },
+    // { label: 'Default Links', value: configs.linkTriangles },
+    // { label: 'Default Links', value: configs.backgroundMask },
     { label: 'Z Index', value: configs.zIndex },
     { label: 'Wobble', value: configs.wobble },
     { label: 'Vibrate', value: configs.vibrate },
@@ -268,17 +270,17 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
       console.log('Home Particles', engine);
       await loadFull(engine);
     });
-    
+
     // Update particles when theme changes
     this.updateParticleColors();
-    
+
     // Subscribe to theme changes
     this.themeSubscription = this.themeService.theme$.subscribe(() => {
       this.updateParticleColors();
       // Refresh particles to apply new colors
       this.particlesVisible = false;
       this.cdr.detectChanges();
-      
+
       setTimeout(() => {
         this.particlesVisible = true;
         this.cdr.detectChanges();
@@ -294,7 +296,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   private getParticleColors() {
     const isDark = this.themeService.getTheme() === 'dark';
     return {
-      particle: isDark ? '#ffffff' : '#000000',
+      particle: isDark ? '#8a0000ff' : '#db1515ff',
       links: isDark ? '#ffffff' : '#000000',
       opacity: isDark ? 0.5 : 0.3
     };
@@ -304,7 +306,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   private updateParticleColors() {
     const colors = this.getParticleColors();
     const currentLinks = this.particlesOptions.particles?.['links'] || {};
-    
+
     this.particlesOptions = {
       ...this.particlesOptions,
       particles: {
@@ -359,7 +361,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     this.updateParticleColors();
     this.particlesVisible = false;
     this.cdr.detectChanges();
-    
+
     setTimeout(() => {
       this.particlesVisible = true;
       this.cdr.detectChanges();

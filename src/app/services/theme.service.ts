@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ThemeService {
   private theme: 'light' | 'dark' = 'dark';
   private themeSubject = new BehaviorSubject<'light' | 'dark'>(this.theme);
-  
+
   // Observable for components to subscribe to theme changes
   public theme$ = this.themeSubject.asObservable();
 
