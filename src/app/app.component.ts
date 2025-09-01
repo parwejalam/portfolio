@@ -29,7 +29,7 @@ export class AppComponent {
   constructor(private icon: IconsService) { }
   ngOnInit() {
     aos.init({
-      duration: 3000,
+      duration: 2000,
     })
   }
 

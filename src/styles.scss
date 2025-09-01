@@ -44,6 +44,11 @@ body.dark {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 // Override Bootstrap's text-muted for dark theme

@@ -14,8 +14,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 })
 export class ContactComponent {
   constructor(private mailService: MailService, private icons: IconsService) { }
-  // iconsi
+  // icons
   icon = this.icons.PaperPlane;
+  emailIcon = this.icons.Email;
+  locationIcon = this.icons.LocationDot;
+  clockIcon = this.icons.Clock;
+  downloadIcon = this.icons.Download;
+  warningIcon = this.icons.ExclamationTriangle;
+  alertIcon = this.icons.InfoCircle;
+  sendIcon = this.icons.PaperPlane;
   socialIcons = this.icons.socialIcons;
   currentYear = new Date().getFullYear();
 
@@ -27,11 +34,12 @@ export class ContactComponent {
   contactFormValues = {
     name: '',
     email: '',
+    subject: '',
     body: '',
   };
 
   get alertColor() {
-    return `text-${this.color}-400`;
+    return this.color === 'green' ? 'alert-success' : 'alert-danger';
   }
 
   hideAlert() {
@@ -49,7 +57,7 @@ export class ContactComponent {
     formData.append('body', this.contactFormValues.body);
     // -- email customization
     formData.append('access_key', this.mailService.form_access_key);
-    formData.append('subject', 'Email from Portfolio');
+    formData.append('subject', this.contactFormValues.subject || 'Email from Portfolio');
     formData.append('reply_to', this.contactFormValues.email);
     formData.append('from_name', 'Portfolio');
 

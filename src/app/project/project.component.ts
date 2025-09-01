@@ -26,7 +26,7 @@ export class ProjectComponent implements OnInit {
       description: 'A comprehensive Islamic learning platform with interactive lessons, quizzes, and progress tracking.',
       technologies: ['Angular', 'TypeScript', 'SCSS', 'Bootstrap'],
       src: 'assets/projects/Qaida.png',
-      liveLink: '',
+      liveLink: 'https://letters.noble-wave.com/',
       githubLink: '',
       category: 'Web Application'
     },
@@ -36,7 +36,7 @@ export class ProjectComponent implements OnInit {
       description: 'Mobile version of the Islamic learning platform with enhanced user experience and offline capabilities.',
       technologies: ['Angular', 'Ionic', 'TypeScript', 'Capacitor'],
       src: 'assets/projects/Qaida2.png',
-      liveLink: '',
+      liveLink: 'https://letters.noble-wave.com/',
       githubLink: '',
       category: 'Mobile Application'
     },

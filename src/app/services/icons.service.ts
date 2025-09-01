@@ -10,7 +10,16 @@ import {
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faEnvelope, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faDatabase, 
+  faEnvelope, 
+  faPaperPlane, 
+  faLocationDot, 
+  faClock, 
+  faDownload, 
+  faExclamationTriangle, 
+  faInfoCircle 
+} from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root',
@@ -47,10 +56,16 @@ export class IconsService {
   ];
 
   Envelope = faEnvelope;
+  Email = faEnvelope;
   Angular = faAngular;
   Bootstrap = faBootstrap;
   JavaScript = faJs;
   CSS = faCss3;
   Postgresql = faDatabase;
   PaperPlane = faPaperPlane;
+  LocationDot = faLocationDot;
+  Clock = faClock;
+  Download = faDownload;
+  ExclamationTriangle = faExclamationTriangle;
+  InfoCircle = faInfoCircle;
 }
