@@ -1,21 +1,100 @@
-<div id="projects">
+<div id="projects" class="projects-section">
+    <div class="container-fluid">
+        <!-- Projects Title -->
+        <div class="projects-title text-center mb-5">
+            <h1 class="display-4 text-danger fw-bold">
+                <u>Featured Projects</u>
+            </h1>
+            <p class="lead text-muted mt-3">
+                Explore my portfolio of web applications, mobile apps, and innovative solutions
+            </p>
+        </div>
 
-    <div class="carousel-inner rounded-5 my-5">
-        <h1 class="text-danger text-center my-5"> <u>Projects</u></h1>
-        <!-- <mdb-carousel [controls]="true" [dark]="themeColor" [indicators]="true" [animation]="'slide'" [interval]="2500"
-            class="mx-4 m-md-5 rounded-5">
-            <mdb-carousel-item *ngFor="let project of projects" class="row ">
-                <img src="{{project.src}}" class="d-block col-md-6 offset-md-3" />
-            </mdb-carousel-item>
-        </mdb-carousel> -->
+        <!-- Filter Buttons -->
+        <div class="filter-buttons d-flex flex-wrap justify-content-center mb-5">
+            <button *ngFor="let category of categories" class="btn filter-btn mx-2 mb-2"
+                [class.active]="selectedCategory === category" (click)="filterProjects(category)">
+                {{category}}
+            </button>
+        </div>
 
-        <swiper-container class="mySwiper" effect="coverflow" grab-cursor="true" slides-per-view="3"
-            coverflow-effect-rotate="40" coverflow-effect-stretch="0" coverflow-effect-depth="500"
-            coverflow-effect-modifier="2" coverflow-effect-slide-shadows="true" mousewheel="true" autoplay="true"
-            loop="true" autoplay-delay="1000" autoplay-disable-on-interaction="true">
-            <swiper-slide *ngFor="let project of projects">
-                <img src="{{project.src}}" />
-            </swiper-slide>
-        </swiper-container>
+        <!-- Projects Grid -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let project of filteredProjects">
+                <div class="project-card h-100" data-aos="zoom-in" data-aos-duration="1200">
+                    <!-- Project Image -->
+                    <div class="project-image-container" data-aos="fade-left" data-aos-duration="1200">
+                        <img [src]="project.src" [alt]="project.title" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button *ngIf="project.liveLink" class="btn btn-primary btn-sm me-2"
+                                    (click)="openProject(project)" title="View Live Demo">
+                                    <i class="fas fa-external-link-alt me-1"></i>
+                                    Live Demo
+                                </button>
+                                <button *ngIf="project.githubLink" class="btn btn-outline-light btn-sm"
+                                    (click)="openGithub(project)" title="View Source Code">
+                                    <i class="fab fa-github me-1"></i>
+                                    GitHub
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Content -->
+                    <div class="project-content p-4" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="project-category">
+                            <span class="badge bg-secondary mb-2">{{project.category}}</span>
+                        </div>
+
+                        <h5 class="project-title mb-3">{{project.title}}</h5>
+
+                        <p class="project-description text-muted mb-3">{{project.description}}</p>
+
+                        <!-- Technologies -->
+                        <div class="project-technologies">
+                            <h6 class="tech-title mb-2">Technologies:</h6>
+                            <div class="tech-tags">
+                                <span *ngFor="let tech of project.technologies"
+                                    class="tech-tag badge bg-primary-subtle text-primary me-1 mb-1">
+                                    {{tech}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Footer -->
+                    <div class="project-footer p-3 pt-0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Project #{{project.id}}</small>
+                            <div class="project-links">
+                                <button *ngIf="project.liveLink" class="btn btn-sm btn-outline-primary me-2"
+                                    (click)="openProject(project)" title="View Project">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button *ngIf="project.githubLink" class="btn btn-sm btn-outline-secondary"
+                                    (click)="openGithub(project)" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swiper Carousel (Alternative View) -->
+        <div class="swiper-section mt-5 pt-5">
+            <h3 class="text-center mb-4">Quick Gallery View</h3>
+            <swiper-container class="mySwiper" effect="coverflow" grab-cursor="true" slides-per-view="3"
+                coverflow-effect-rotate="40" coverflow-effect-stretch="0" coverflow-effect-depth="500"
+                coverflow-effect-modifier="2" coverflow-effect-slide-shadows="true" mousewheel="true" autoplay="true"
+                loop="true" autoplay-delay="3000" autoplay-disable-on-interaction="false">
+                <swiper-slide *ngFor="let project of projects" (click)="openProject(project)">
+                    <img [src]="project.src" [alt]="project.title" />
+                    <div class="swiper-slide-title">{{project.title}}</div>
+                </swiper-slide>
+            </swiper-container>
+        </div>
     </div>
 </div>

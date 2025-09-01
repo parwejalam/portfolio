@@ -1,3 +1,249 @@
+// Projects Section Styling
+.projects-section {
+    padding: 80px 0;
+    min-height: 100vh;
+
+    .projects-title {
+        h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+
+            u {
+                text-decoration: none;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: linear-gradient(45deg, #dc3545, #e74c3c);
+                    border-radius: 2px;
+                }
+            }
+        }
+
+        p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// Filter Buttons
+.filter-buttons {
+    .filter-btn {
+        background: transparent;
+        border: 2px solid #6c757d;
+        color: #6c757d;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: #6c757d;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        &.active {
+            background: #dc3545;
+            border-color: #dc3545;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+        }
+    }
+}
+
+// Dark theme filter buttons
+.dark .filter-buttons .filter-btn {
+    border-color: #adb5bd;
+    color: #adb5bd;
+
+    &:hover {
+        background: #adb5bd;
+        color: #212529;
+    }
+
+    &.active {
+        background: #dc3545;
+        border-color: #dc3545;
+        color: white;
+    }
+}
+
+// Project Cards
+.project-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-image-container {
+        position: relative;
+        overflow: hidden;
+        height: 200px;
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+
+            .project-actions {
+                text-align: center;
+
+                .btn {
+                    margin: 0 5px;
+                    transform: translateY(20px);
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+
+        &:hover {
+            .project-image {
+                transform: scale(1.1);
+            }
+
+            .project-overlay {
+                opacity: 1;
+
+                .btn {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+
+    .project-content {
+        .project-category .badge {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #212529;
+            font-size: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .project-technologies {
+            .tech-title {
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: #495057;
+            }
+
+            .tech-tags {
+                .tech-tag {
+                    font-size: 0.75rem;
+                    padding: 4px 8px;
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+
+    .project-footer {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        background: #f8f9fa;
+
+        .project-links .btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+}
+
+// Dark theme project cards
+.dark .project-card {
+    background: #2d3748;
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-content {
+        .project-title {
+            color: #ffffff;
+        }
+
+        .project-description {
+            color: #a0aec0;
+        }
+
+        .project-technologies .tech-title {
+            color: #e2e8f0;
+        }
+    }
+
+    .project-footer {
+        background: #1a202c;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+// Swiper Section
+.swiper-section {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+
+    h3 {
+        color: #495057;
+        font-weight: 600;
+    }
+}
+
+.dark .swiper-section {
+    border-color: rgba(255, 255, 255, 0.1);
+
+    h3 {
+        color: #e2e8f0;
+    }
+}
+
+// Enhanced Swiper Styling
 swiper-container {
     width: 100%;
     padding-top: 50px;
@@ -8,31 +254,113 @@ swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-    // Light theme shadows (dark shadows)
+    cursor: pointer;
+    position: relative;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        border-radius: 15px;
+    }
+
+    .swiper-slide-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        padding: 20px 15px 15px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+    }
 }
 
-swiper-slide:hover {
-    transform: translateY(-4px);
-    // Light theme hover shadows (dark shadows)
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25), 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-// Dark theme shadows (light shadows)
+// Dark theme swiper slides
 .dark swiper-slide {
     box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15), 0 4px 8px rgba(255, 255, 255, 0.1);
+
+    &:hover {
+        box-shadow: 0 16px 48px rgba(255, 255, 255, 0.25), 0 8px 16px rgba(255, 255, 255, 0.15);
+    }
 }
 
-.dark swiper-slide:hover {
-    box-shadow: 0 16px 48px rgba(255, 255, 255, 0.25), 0 8px 16px rgba(255, 255, 255, 0.15);
+// Responsive Design
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 40px 0;
+
+        .projects-title h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .filter-buttons {
+        .filter-btn {
+            font-size: 0.85rem;
+            padding: 6px 12px;
+            margin: 4px;
+        }
+    }
+
+    .project-card {
+        margin-bottom: 2rem;
+
+        .project-image-container {
+            height: 180px;
+        }
+    }
+
+    swiper-slide {
+        width: 250px;
+
+        img {
+            height: 150px;
+        }
+    }
 }
 
-swiper-slide img {
-    width: 100%;
-    height: min-content;
-    display: block;
-    border-radius: 12px;
+@media (max-width: 576px) {
+    .projects-section .projects-title {
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .filter-buttons {
+        .filter-btn {
+            font-size: 0.8rem;
+            padding: 5px 10px;
+        }
+    }
+
+    swiper-slide {
+        width: 200px;
+
+        img {
+            height: 120px;
+        }
+
+        .swiper-slide-title {
+            font-size: 0.8rem;
+            padding: 15px 10px 10px;
+        }
+    }
 }
