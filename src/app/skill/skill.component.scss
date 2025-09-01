@@ -320,17 +320,138 @@
 .skill-item {
     .progress-bar {
         width: 0%;
-        animation: fillProgress 2s ease-in-out forwards;
-        animation-delay: 0.5s;
+        transition: width 2.5s ease-out 0.3s;
+        position: relative;
+
+        // Add a pulse effect during animation
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            opacity: 0.5;
+            animation: pulse 2s ease-in-out infinite;
+        }
+    }
+
+    // When the skill item is animated by AOS, trigger progress bar animation
+    &.aos-animate .progress-bar {
+        width: var(--progress-width, 0%) !important;
     }
 }
 
-@keyframes fillProgress {
-    from {
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scaleY(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scaleY(1.1);
+    }
+}
+
+// Fallback keyframes for specific percentages (for better browser support)
+.progress-bar[data-proficiency="95"] .progress-bar {
+    animation: fillTo95 2.5s ease-out 0.3s forwards;
+}
+
+.progress-bar[data-proficiency="90"] .progress-bar {
+    animation: fillTo90 2.5s ease-out 0.3s forwards;
+}
+
+.progress-bar[data-proficiency="88"] .progress-bar {
+    animation: fillTo88 2.5s ease-out 0.3s forwards;
+}
+
+.progress-bar[data-proficiency="85"] .progress-bar {
+    animation: fillTo85 2.5s ease-out 0.3s forwards;
+}
+
+.progress-bar[data-proficiency="80"] .progress-bar {
+    animation: fillTo80 2.5s ease-out 0.3s forwards;
+}
+
+.progress-bar[data-proficiency="75"] .progress-bar {
+    animation: fillTo75 2.5s ease-out 0.3s forwards;
+}
+
+.progress-bar[data-proficiency="70"] .progress-bar {
+    animation: fillTo70 2.5s ease-out 0.3s forwards;
+}
+
+@keyframes fillTo95 {
+    0% {
         width: 0%;
     }
 
-    to {
-        width: var(--progress-width, 0%);
+    100% {
+        width: 95%;
+    }
+}
+
+@keyframes fillTo90 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes fillTo88 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 88%;
+    }
+}
+
+@keyframes fillTo85 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes fillTo80 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes fillTo75 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes fillTo70 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
     }
 }

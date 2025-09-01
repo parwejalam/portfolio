@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { IconsService } from '../services/icons.service';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -10,8 +10,38 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   standalone: true,
   imports: [CommonModule, FontAwesomeModule]
 })
-export class SkillComponent {
-  constructor(private icon: IconsService) { }
+export class SkillComponent implements OnInit, AfterViewInit {
+
+  constructor(private icon: IconsService, private elementRef: ElementRef) { }
+
+  ngOnInit(): void {
+    // Component initialization
+  }
+
+  ngAfterViewInit(): void {
+    // Initialize progress bar animations when skills come into view
+    this.initializeProgressAnimations();
+  }
+
+  private initializeProgressAnimations(): void {
+    const progressBars = this.elementRef.nativeElement.querySelectorAll('.progress-bar');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const progressBar = entry.target as HTMLElement;
+          progressBar.style.animationPlayState = 'running';
+          observer.unobserve(progressBar);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    progressBars.forEach((bar: Element) => {
+      const htmlBar = bar as HTMLElement;
+      htmlBar.style.animationPlayState = 'paused';
+      observer.observe(htmlBar);
+    });
+  }
 
   skillCategories = [
     {
@@ -20,24 +50,24 @@ export class SkillComponent {
       color: '#dd0f24',
       skills: [
         {
-          name: 'Angular 18',
+          name: 'Angular',
           description: 'SPA development, reactive forms, routing, RxJS',
           icon: this.icon.Angular,
           proficiency: 95,
           color: '#dd1b16'
         },
         {
-          name: 'Ionic 7',
+          name: 'Ionic',
           description: 'Hybrid mobile UI',
-          icon: this.icon.Angular, // You can update this if you have an Ionic icon
-          proficiency: 85,
+          icon: this.icon.Ionic, // You can update this if you have an Ionic icon
+          proficiency: 70,
           color: '#3880ff'
         },
         {
           name: 'Bootstrap & Tailwind CSS',
           description: 'Responsive design, modern layouts',
           icon: this.icon.Bootstrap,
-          proficiency: 90,
+          proficiency: 80,
           color: '#7952b3'
         },
         {
@@ -58,22 +88,22 @@ export class SkillComponent {
           name: 'Node.js',
           description: 'Express.js, REST APIs',
           icon: this.icon.JavaScript, // You can update this if you have a Node.js icon
-          proficiency: 80,
+          proficiency: 70,
           color: '#339933'
         },
         {
           name: 'PostgreSQL',
           description: 'Database design, queries',
           icon: this.icon.Postgresql,
-          proficiency: 75,
+          proficiency: 60,
           color: '#336791'
         },
         {
           name: 'Firebase',
           description: 'Authentication, hosting, real-time DB',
-          icon: this.icon.Angular, // You can update this if you have a Firebase icon
-          proficiency: 70,
-          color: '#ffca28'
+          icon: this.icon.Firebase, // You can update this if you have a Firebase icon
+          proficiency: 55,
+          color: '#c40000ff'
         }
       ]
     },
@@ -86,14 +116,14 @@ export class SkillComponent {
           name: 'Capacitor',
           description: 'Convert Angular apps to mobile, push notifications, device APIs',
           icon: this.icon.Angular, // You can update this if you have a Capacitor icon
-          proficiency: 85,
+          proficiency: 80,
           color: '#119eff'
         },
         {
           name: 'Ionic',
           description: 'Cross-platform mobile apps',
-          icon: this.icon.Angular, // You can update this if you have an Ionic icon
-          proficiency: 85,
+          icon: this.icon.Ionic, // You can update this if you have an Ionic icon
+          proficiency: 75,
           color: '#3880ff'
         }
       ]
@@ -106,16 +136,16 @@ export class SkillComponent {
         {
           name: 'Git & GitHub',
           description: 'Version control, CI/CD',
-          icon: this.icon.Angular, // You can update this if you have a Git icon
+          icon: this.icon.Github, // You can update this if you have a Git icon
           proficiency: 90,
-          color: '#f05032'
+          color: 'var(--text-color)'
         },
         {
           name: 'Railway & Firebase',
           description: 'Deployment & hosting',
-          icon: this.icon.Angular, // You can update this if you have deployment icons
-          proficiency: 80,
-          color: '#0f0f23'
+          icon: this.icon.Firebase, // You can update this if you have deployment icons
+          proficiency: 70,
+          color: '#c40000ff'
         },
         {
           name: 'VS Code',
@@ -141,7 +171,7 @@ export class SkillComponent {
         {
           name: 'Library Customization',
           description: 'e.g., ngx-mat-intl-tel-input',
-          icon: this.icon.Angular,
+          icon: this.icon.LibraryCustomization,
           proficiency: 85,
           color: '#ff6b6b'
         },

@@ -5,27 +5,30 @@ import {
   faCss3,
   faFacebook,
   faGithub,
+  faGripfire,
   faInstagram,
   faJs,
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { 
-  faDatabase, 
-  faEnvelope, 
-  faPaperPlane, 
-  faLocationDot, 
-  faClock, 
-  faDownload, 
-  faExclamationTriangle, 
-  faInfoCircle 
+import {
+  faDatabase,
+  faEnvelope,
+  faPaperPlane,
+  faLocationDot,
+  faClock,
+  faDownload,
+  faExclamationTriangle,
+  faInfoCircle,
+  faCircleNotch,
+  faFileEdit
 } from '@fortawesome/free-solid-svg-icons';
 
 @Injectable({
   providedIn: 'root',
 })
 export class IconsService {
-  constructor() {}
+  constructor() { }
 
   socialIcons = [
     {
@@ -68,4 +71,8 @@ export class IconsService {
   Download = faDownload;
   ExclamationTriangle = faExclamationTriangle;
   InfoCircle = faInfoCircle;
+  Firebase = faGripfire;
+  Github = faGithub;
+  Ionic = faCircleNotch;
+  LibraryCustomization = faFileEdit;
 }

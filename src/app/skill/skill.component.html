@@ -49,8 +49,8 @@
 
                             <!-- Progress Bar -->
                             <div class="progress-container">
-                                <div class="progress-bar" [style.width.%]="skill.proficiency"
-                                    [style.background-color]="skill.color">
+                                <div class="progress-bar" [style.--progress-width.%]="skill.proficiency"
+                                    [style.background-color]="skill.color" [attr.data-proficiency]="skill.proficiency">
                                 </div>
                             </div>
                         </div>
