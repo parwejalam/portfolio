@@ -16,7 +16,7 @@
     <!-- Main Content -->
     <div class="row g-5 align-items-start">
       <!-- Contact Information -->
-      <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1200">
+      <div class="col-lg-5 h-100" data-aos="fade-right" data-aos-duration="1200">
         <div class="contact-info-card h-100">
           <div class="card-header mb-4">
             <h3 class="h4 fw-bold mb-3">Get in Touch</h3>
@@ -83,7 +83,7 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1200">
+      <div class="col-lg-7 h-100" data-aos="fade-left" data-aos-duration="1200">
         <div class="contact-form-card">
           <div class="card-header mb-4">
             <h3 class="h4 fw-bold">Send Message</h3>
@@ -95,16 +95,8 @@
               <!-- Name field -->
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input 
-                    name="name" 
-                    [(ngModel)]="contactFormValues.name" 
-                    #name="ngModel" 
-                    id="nameInput" 
-                    type="text"
-                    placeholder="" 
-                    class="custom-input" 
-                    required 
-                    minlength="2" />
+                  <input name="name" [(ngModel)]="contactFormValues.name" #name="ngModel" id="nameInput" type="text"
+                    placeholder="" class="custom-input" required minlength="2" />
                   <label for="nameInput">Full Name *</label>
                 </div>
                 <div *ngIf="name.errors && name.touched && name.dirty" class="form-text text-danger mt-1">
@@ -115,15 +107,8 @@
               <!-- Email field -->
               <div class="col-md-6">
                 <div class="form-floating">
-                  <input 
-                    name="email" 
-                    [(ngModel)]="contactFormValues.email" 
-                    #email="ngModel" 
-                    id="emailInput" 
-                    type="email"
-                    placeholder="" 
-                    class="custom-input" 
-                    required
+                  <input name="email" [(ngModel)]="contactFormValues.email" #email="ngModel" id="emailInput"
+                    type="email" placeholder="" class="custom-input" required
                     pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" />
                   <label for="emailInput">Email Address *</label>
                 </div>
@@ -135,15 +120,8 @@
               <!-- Subject field -->
               <div class="col-12">
                 <div class="form-floating">
-                  <input 
-                    name="subject" 
-                    [(ngModel)]="contactFormValues.subject" 
-                    #subject="ngModel" 
-                    id="subjectInput" 
-                    type="text"
-                    placeholder="" 
-                    class="custom-input" 
-                    required />
+                  <input name="subject" [(ngModel)]="contactFormValues.subject" #subject="ngModel" id="subjectInput"
+                    type="text" placeholder="" class="custom-input" required />
                   <label for="subjectInput">Subject *</label>
                 </div>
                 <div *ngIf="subject.errors && subject.touched && subject.dirty" class="form-text text-danger mt-1">
@@ -154,20 +132,13 @@
               <!-- Message field -->
               <div class="col-12">
                 <div class="form-floating">
-                  <textarea 
-                    name="body" 
-                    [(ngModel)]="contactFormValues.body" 
-                    #body="ngModel" 
-                    id="textArea"
-                    class="custom-textarea" 
-                    placeholder="" 
-                    required 
-                    minlength="20"
-                    rows="6"></textarea>
+                  <textarea name="body" [(ngModel)]="contactFormValues.body" #body="ngModel" id="textArea"
+                    class="custom-textarea" placeholder="" required minlength="20" rows="6"></textarea>
                   <label for="textArea">Your Message *</label>
                 </div>
                 <div *ngIf="body.errors && body.touched && body.dirty" class="form-text text-danger mt-1">
-                  <small><fa-icon [icon]="warningIcon" class="me-1"></fa-icon>Please write at least 20 characters</small>
+                  <small><fa-icon [icon]="warningIcon" class="me-1"></fa-icon>Please write at least 20
+                    characters</small>
                 </div>
               </div>
             </div>
@@ -182,10 +153,7 @@
 
             <!-- Submit button -->
             <div class="text-center mt-4">
-              <button 
-                [disabled]="contactForm.invalid || onSubmit"
-                class="btn-submit"
-                type="submit">
+              <button [disabled]="contactForm.invalid || onSubmit" class="btn-submit" type="submit">
                 <ng-container *ngIf="onSubmit === false; else submittingEmail">
                   <fa-icon [icon]="sendIcon" class="me-2"></fa-icon>
                   Send Message
@@ -218,7 +186,7 @@
                 parwejalamgt&#64;gmail.com
               </a>
             </p>
-            
+
             <!-- Social Links in Footer -->
             <div class="footer-social mb-4">
               <div class="d-flex justify-content-center gap-3">
@@ -229,7 +197,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="copyright">
               <p class="mb-0 text-muted">
                 <small>&copy; {{currentYear}} Parwej Alam. All rights reserved.</small>

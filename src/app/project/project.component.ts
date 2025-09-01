@@ -2,7 +2,6 @@ import { Component, ElementRef, ViewChild, CUSTOM_ELEMENTS_SCHEMA, OnInit } from
 import { CommonModule } from '@angular/common';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { ThemeService } from '../services/theme.service';
-import Swiper from 'swiper';
 
 
 declare var ScrollReveal: any;

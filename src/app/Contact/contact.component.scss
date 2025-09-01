@@ -7,10 +7,10 @@
             outline: none !important;
         }
     }
-    
+
     // Ensure floating labels work correctly
-    .form-floating > .form-control:focus ~ label,
-    .form-floating > .form-control:not(:placeholder-shown) ~ label {
+    .form-floating>.form-control:focus~label,
+    .form-floating>.form-control:not(:placeholder-shown)~label {
         color: inherit;
         transform: none;
     }
@@ -121,11 +121,13 @@
 
     &:hover {
         background: rgba(221, 15, 36, 0.05);
-        
+
         &::before {
             left: 100%;
         }
-    }    .contact-icon {
+    }
+
+    .contact-icon {
         width: 50px;
         height: 50px;
         border-radius: 50%;
@@ -280,7 +282,7 @@
         color: var(--text-color);
         position: relative;
         display: inline-block;
-        
+
         &::after {
             content: '';
             position: absolute;
@@ -295,6 +297,7 @@
 
 // Override any remaining Bootstrap form styles within this component
 .contact-form {
+
     input,
     textarea,
     select {
@@ -302,7 +305,7 @@
             box-shadow: none !important;
             border-color: transparent !important;
         }
-        
+
         &.form-control {
             &:focus {
                 box-shadow: none !important;
@@ -310,7 +313,9 @@
             }
         }
     }
-}// Form Styles
+}
+
+// Form Styles
 .contact-form {
     .form-floating {
         position: relative;
@@ -327,12 +332,12 @@
             transition: all 0.3s ease;
             resize: none;
             box-sizing: border-box;
-            
+
             // Remove any inherited Bootstrap styles
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            
+
             // Ensure consistent styling
             // line-height: 1.5;
             font-family: inherit;
@@ -342,7 +347,7 @@
                 border-color: #dd0f24 !important;
                 background: var(--card-bg) !important;
                 box-shadow: none !important;
-                
+
                 // Prevent any browser default focus styles
                 -webkit-box-shadow: none !important;
                 -moz-box-shadow: none !important;
@@ -352,7 +357,7 @@
                 color: var(--muted-text);
                 opacity: 1;
             }
-            
+
             // Prevent browser autofill styling
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
@@ -361,12 +366,12 @@
                 -webkit-text-fill-color: var(--text-color) !important;
                 transition: background-color 5000s ease-in-out 0s;
             }
-            
+
             // Valid state
             &:valid {
                 border-color: var(--card-border);
             }
-            
+
             // Invalid state
             &:invalid:not(:placeholder-shown) {
                 border-color: #dc3545;
@@ -386,7 +391,7 @@
             border-radius: 8px;
             transition: all 0.3s ease;
             pointer-events: none;
-            
+
             // Ensure label positioning
             position: absolute;
             top: 0;
@@ -396,14 +401,14 @@
             z-index: 2;
         }
 
-        .custom-input:focus + label,
-        .custom-textarea:focus + label,
-        .custom-input:not(:placeholder-shown) + label,
-        .custom-textarea:not(:placeholder-shown) + label {
+        .custom-input:focus+label,
+        .custom-textarea:focus+label,
+        .custom-input:not(:placeholder-shown)+label,
+        .custom-textarea:not(:placeholder-shown)+label {
             color: #dd0f24 !important;
             font-weight: 600;
             transform: translate(0.75rem, 0.25rem) scale(0.85);
-            background: var(--card-bg);
+            background: transparent;
             padding: 0 0.25rem;
         }
     }
