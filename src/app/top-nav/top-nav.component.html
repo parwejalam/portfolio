@@ -1,20 +1,25 @@
 <!-- NavBar -->
 <nav class="h-top sticky-top navbar navbar-expand-lg  py-2 pe-3 ps-1 bg-dark">
   <div class="d-flex">
-    <button class="navbar-toggler custom-toggler text" type="button" (click)="toggleNav()" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon ms-0"></span>
-    </button>
-    <strong class="navbar-brand text-white ms-2">Parwej's Portfolio</strong>
+    <a href="#home">
+      <img class="ms-md-5 ms-sm-2" src="assets/download.ico" width="40px">
+    </a>
+    <!-- <strong class="navbar-brand text-white ms-2">Parwej's Portfolio</strong> -->
   </div>
   <div class="collapse navbar-collapse" [ngClass]="{'show': isNavbarCollapsed}" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" *ngFor="let link of navLinks">
-        <a class="nav-link" href="{{link.id}}" (click)="toggleNav()">{{link.label}}</a>
+        <a class="nav-link link-style" href="{{link.id}}" (click)="toggleNav()">{{link.label}}</a>
       </li>
     </ul>
   </div>
-  <button class="btn btn-outline-secondary ms-2" (click)="toggleTheme()">
-    <i class="fs-5" [class]="themeIcon"></i>
-  </button>
+  <div>
+    <button class="btn btn-outline-secondary me-sm-0 ms-md-2" (click)="toggleTheme()">
+      <i class="fs-5" [class]="themeIcon"></i>
+    </button>
+    <button class="navbar-toggler custom-toggler text" type="button" (click)="toggleNav()" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon ms-0"></span>
+    </button>
+  </div>
 </nav>
