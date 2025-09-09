@@ -1,24 +1,45 @@
-<div class="mainSection d-flex flex-wrap" id="home">
-    <div class="textContent  textStyle col-12 col-md-7 px-5 px-md-5 p-5">
+<div class="mainSection d-flex flex-wrap position-relative" id="home">
+    <!-- Particles Background for Home Section Only -->
+    <ngx-particles class="home-particles" [id]="particlesId" [options]="particlesOptions"
+        (particlesLoaded)="particlesLoaded($event)" *ngIf="particlesVisible">
+    </ngx-particles>
+
+    <!-- Particles Control Panel -->
+    <div class="particles-controls position-absolute">
+        <div class="d-flex align-items-center gap-2">
+            <select class="form-select form-select-sm particle-select" (change)="particlesChange($event)">
+                <option *ngFor="let part of configPart; let i = index" [value]="i">
+                    {{part.label}}
+                </option>
+            </select>
+            <button class="btn btn-sm btn-outline-light particle-toggle" (click)="toggleParticlesClick()"
+                [title]="particlesVisible ? 'Hide Particles' : 'Show Particles'">
+                <i class="fas fa-eye" *ngIf="particlesVisible"></i>
+                <i class="fas fa-eye-slash" *ngIf="!particlesVisible"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="textContent textStyle col-12 col-md-7 px-5 px-md-5 p-5">
         <div>Hii, <br>
 
             I'm <span class="text-danger">Parwej</span>
         </div>
-        <span  id="typing-effect" #typingEffect></span><br>
+        <span id="typing-effect" #typingEffect></span><br>
         <a href="#contact">
-            <button class="bg-danger fs-4 rounded" >Contact me!</button>
+            <button class="bg-danger fs-4 rounded">Contact me!</button>
         </a>
         <div class="d-flex">
             <div class="socialIcon px-2 " *ngFor=" let  social of socialIcons">
-              <a  href="{{social.link}}"target="_blank" ><fa-icon class="fs-2"  [icon]="social.icon"></fa-icon></a>
+                <a href="{{social.link}}" target="_blank"><fa-icon class="fs-2" [icon]="social.icon"></fa-icon></a>
             </div>
-          </div>
+        </div>
 
     </div>
-    <div class="imgContent col-12 align-self-center col-md-5 ms-md-0 ">
-        <div >
+    <div class="imgContent col-12 align-self-center col-md-5 ms-md-0">
+        <div>
 
-            <img src="assets/parwej.png"   width="100%">
+            <img src="assets/parwej.png" width="100%">
         </div>
     </div>
 </div>

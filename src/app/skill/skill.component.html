@@ -1,15 +1,97 @@
-<div id="skills ">
-    <h1 class="text-danger text-center mb-5"> <u> Skills</u></h1>
+<section id="skills" class="py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-4 fw-bold text-danger mb-3">
+                    <span class="position-relative">
+                        My Skills
+                        <span class="underline-effect"></span>
+                    </span>
+                </h1>
+                <p class="lead text-muted">Technologies and tools I work with to build amazing applications</p>
+            </div>
+        </div>
 
-    <div class="d-md-flex flex-wrap mx-4 mx-md-0">
+        <!-- Skills Categories -->
+        <div class="row g-4">
+            <div class="col-lg-6" *ngFor="let category of skillCategories; let i = index" data-aos="fade-up"
+                [attr.data-aos-delay]="i * 100">
 
-        <div class="card  col-12 col-md-5 mx-0 mx-md-5 align-self-center fs-4 text-center  mb-3  wow slideInLeft"
-            *ngFor="let skill of skills" data-wow-duration="2s" data-wow-delay="5s">
-            <div class="height">
-                <fa-icon [icon]="skill.icon"></fa-icon>
-                <span>{{skill.name}}</span>
-                <div class="skills_bar"></div>
+                <!-- Category Card -->
+                <div class="skill-category-card h-100">
+                    <div class="category-header">
+                        <div class="category-icon" [style.background-color]="category.color">
+                            <i [class]="category.icon"></i>
+                        </div>
+                        <h3 class="category-title">{{ category.title }}</h3>
+                    </div>
+
+                    <!-- Skills in Category -->
+                    <div class="skills-list">
+                        <div class="skill-item" *ngFor="let skill of category.skills; let j = index"
+                            data-aos="fade-left" [attr.data-aos-delay]="(i * 100) + (j * 50)">
+
+                            <div class="skill-header">
+                                <div class="skill-icon-name">
+                                    <div class="skill-icon" [style.color]="skill.color">
+                                        <fa-icon [icon]="skill.icon"></fa-icon>
+                                    </div>
+                                    <div class="skill-info">
+                                        <h5 class="skill-name">{{ skill.name }}</h5>
+                                        <p class="skill-description">{{ skill.description }}</p>
+                                    </div>
+                                </div>
+                                <div class="skill-percentage">
+                                    <span class="percentage-text">{{ skill.proficiency }}%</span>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar -->
+                            <div class="progress-container">
+                                <div class="progress-bar" [style.--progress-width.%]="skill.proficiency"
+                                    [style.background-color]="skill.color" [attr.data-proficiency]="skill.proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Skills Summary -->
+        <div class="row mt-5">
+            <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="600">
+                <div class="skills-summary">
+                    <h4 class="text-danger mb-3">Quick Stats</h4>
+                    <div class="row g-3">
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number text-danger">2+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number text-success">15+</div>
+                                <div class="stat-label">Technologies</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number text-info">10+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="stat-item">
+                                <div class="stat-number text-warning">5</div>
+                                <div class="stat-label">Specializations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>

@@ -1,6 +1,3 @@
-<!-- Ngx Particles -->
-<ngx-particles class="particles" id="tsparticles" [options]="particlesOptions" *ngIf="particlesVisible"></ngx-particles>
-
 <!-- NavBar -->
 <nav class="h-top sticky-top navbar navbar-expand-lg  py-2 pe-3 ps-1 bg-dark">
   <div class="d-flex">
@@ -15,12 +12,9 @@
       <li class="nav-item" *ngFor="let link of navLinks">
         <a class="nav-link" href="{{link.id}}" (click)="toggleNav()">{{link.label}}</a>
       </li>
-      <select class="select" id="particle-select" (change)="particlesChange($event)">
-        <option class="option" *ngFor="let part of configPart" [value]="part.value">{{part.label}}</option>
-      </select>
     </ul>
   </div>
-  <button class="btn btn-outline-secondary ms-2" (click)=" toggleParticlesClick();toggleTheme();"> <i class="fs-5"
-      class="fs-5" [class]="themeIcon"></i>
+  <button class="btn btn-outline-secondary ms-2" (click)="toggleTheme()">
+    <i class="fs-5" [class]="themeIcon"></i>
   </button>
 </nav>

@@ -1,9 +1,11 @@
+@use 'mdb-angular-ui-kit/assets/scss/mdb.scss' as mdb;
+@use '@fortawesome/fontawesome-free/css/all.css';
+
 /* You can add global styles to this file, and also import other style files */
-@import "bootstrap/dist/css/bootstrap.min.css";
 // MDB SCSS
 // @import "mdb-angular-ui-kit/assets/scss/mdb.scss";
-@import "node_modules/mdb-angular-ui-kit/assets/scss/mdb.scss";
-
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "aos/dist/aos.css";
 
 // src/styles.scss
 :root {
@@ -13,14 +15,18 @@
   scrollbar-color: rgb(207, 27, 27) rgb(20, 25, 27) !important;
   scrollbar-width: thin !important;
 }
-.text-danger{
-  color: #dd0f24!important;
+
+.text-danger {
+  color: #dd0f24 !important;
 }
 
 body.light {
   --bs-link-color-rgb: #000;
   --background-color: #ffffff !important;
   --text-color: #000 !important;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-border: rgba(0, 0, 0, 0.125);
+  --muted-text: #6c757d;
   background-color: var(--background-color) !important;
   color: var(--text-color) !important;
 }
@@ -29,11 +35,27 @@ body.dark {
   --bs-link-color-rgb: #fff;
   --background-color: rgba(27, 36, 45, 255) !important;
   --text-color: #fff !important;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --muted-text: rgba(255, 255, 255, 0.6);
   background-color: var(--background-color) !important;
   color: var(--text-color) !important;
 }
 
 html {
   scroll-behavior: smooth;
-}@import '@fortawesome/fontawesome-free/css/all.css';
-@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+// Override Bootstrap's text-muted for dark theme
+body.dark .text-muted {
+  color: var(--muted-text) !important;
+}
+
+body.light .text-muted {
+  color: var(--muted-text) !important;
+}

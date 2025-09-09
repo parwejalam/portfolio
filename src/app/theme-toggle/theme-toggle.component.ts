@@ -8,9 +8,10 @@ import { ThemeService } from '../services/theme.service';
   selector: 'app-theme-toggle',
   templateUrl: './theme-toggle.component.html',
   styleUrls: ['./theme-toggle.component.scss'],
+  standalone: true
 })
 export class ThemeToggleComponent {
-  themeIcon?: string ;
+  themeIcon?: string;
 
   constructor(private themeService: ThemeService) {
     this.updateIcon();
@@ -23,10 +24,10 @@ export class ThemeToggleComponent {
   updateIcon(): void {
     this.themeIcon =
       this.themeService.getTheme() === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-      
+
   }
 
-  
 
- 
+
+
 }
