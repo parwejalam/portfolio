@@ -1,0 +1,1 @@
+import{f as t}from"./chunk-EQDQRRRY.js";function n(r,a=!0){return t(this,null,function*(){let e=r,{EmittersCircleShapeGenerator:i}=yield import("./chunk-STR5KSV5.js");e.addEmitterShapeGenerator?.("circle",new i),yield e.refresh(a)})}export{n as loadEmittersShapeCircle};

@@ -1,0 +1,1 @@
+import{f as a}from"./chunk-EQDQRRRY.js";function i(e,r=!0){return a(this,null,function*(){let{CircleDrawer:c}=yield import("./chunk-JYA2R66E.js");yield e.addShape("circle",new c,r)})}export{i as loadCircleShape};

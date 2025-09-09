@@ -1,1 +1,0 @@
-import{d as t}from"./chunk-KFZQC3P5.js";function n(a,e=!0){return t(this,null,function*(){yield a.addParticleUpdater("rotate",r=>t(this,null,function*(){let{RotateUpdater:o}=yield import("./chunk-JNKEQYLA.js");return new o(r)}),e)})}export{n as loadRotateUpdater};

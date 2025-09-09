@@ -1,0 +1,1 @@
+import{f as a}from"./chunk-EQDQRRRY.js";function n(r,t=!0){return a(this,null,function*(){yield r.addParticleUpdater("color",o=>a(null,null,function*(){let{ColorUpdater:e}=yield import("./chunk-H5IWGFAY.js");return new e(o)}),t)})}export{n as loadColorUpdater};

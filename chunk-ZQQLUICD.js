@@ -1,0 +1,1 @@
+import"./chunk-EQDQRRRY.js";var s=Math.sqrt(2),c=2;function a(e){let{context:t,radius:i}=e,r=i/s,o=r*c;t.rect(-r,-r,o,o)}var u=4,d=class{draw(t){a(t)}getSidesCount(){return u}};export{d as SquareDrawer};

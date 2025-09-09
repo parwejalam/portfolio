@@ -1,1 +1,0 @@
-import{d as a}from"./chunk-KFZQC3P5.js";function n(t,e=!0){return a(this,null,function*(){yield t.addParticleUpdater("life",r=>a(this,null,function*(){let{LifeUpdater:i}=yield import("./chunk-7IOV2MWX.js");return new i(r)}),e)})}export{n as loadLifeUpdater};

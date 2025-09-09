@@ -1,1 +1,0 @@
-import{d as a}from"./chunk-KFZQC3P5.js";function o(t,e=!0){return a(this,null,function*(){yield t.addInteractor("externalPause",n=>a(this,null,function*(){let{Pauser:r}=yield import("./chunk-WHW675KB.js");return new r(n)}),e)})}export{o as loadExternalPauseInteraction};

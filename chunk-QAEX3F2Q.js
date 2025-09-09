@@ -1,1 +1,0 @@
-import{a as o}from"./chunk-D7LDRPXI.js";import"./chunk-IVQSTHXJ.js";import"./chunk-RV5XFZSS.js";import{d as r}from"./chunk-KFZQC3P5.js";function i(t,a=!0){return r(this,null,function*(){yield t.addInteractor("externalTrail",e=>r(this,null,function*(){let{TrailMaker:n}=yield import("./chunk-C4W5OVYM.js");return new n(e)}),a)})}export{o as Trail,i as loadExternalTrailInteraction};

@@ -1,1 +1,0 @@
-import{d as a}from"./chunk-KFZQC3P5.js";function i(t,r=!0){return a(this,null,function*(){yield t.addParticleUpdater("opacity",c=>a(this,null,function*(){let{OpacityUpdater:e}=yield import("./chunk-VPXJ2365.js");return new e(c)}),r)})}export{i as loadOpacityUpdater};

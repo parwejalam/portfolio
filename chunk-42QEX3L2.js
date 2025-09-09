@@ -1,1 +1,0 @@
-import{d as t}from"./chunk-KFZQC3P5.js";function r(a,e=!0){return t(this,null,function*(){yield a.addParticleUpdater("twinkle",()=>t(this,null,function*(){let{TwinkleUpdater:n}=yield import("./chunk-ZQ547DY6.js");return new n}),e)})}export{r as loadTwinkleUpdater};

@@ -1,0 +1,1 @@
+import{f as t}from"./chunk-EQDQRRRY.js";function n(a,r=!0){return t(this,null,function*(){yield a.addParticleUpdater("tilt",e=>t(null,null,function*(){let{TiltUpdater:i}=yield import("./chunk-STH7U5EX.js");return new i(e)}),r)})}export{n as loadTiltUpdater};

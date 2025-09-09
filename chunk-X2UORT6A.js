@@ -1,1 +1,0 @@
-import{d as a}from"./chunk-KFZQC3P5.js";function i(t,e=!0){return a(this,null,function*(){yield t.addParticleUpdater("size",()=>a(this,null,function*(){let{SizeUpdater:r}=yield import("./chunk-6L2656GO.js");return new r}),e)})}export{i as loadSizeUpdater};

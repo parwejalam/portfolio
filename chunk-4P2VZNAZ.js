@@ -1,0 +1,1 @@
+import{a}from"./chunk-6B5DVBNW.js";import{f as t}from"./chunk-EQDQRRRY.js";function c(r,e=!0){return t(this,null,function*(){yield r.addInteractor("externalBounce",n=>t(null,null,function*(){let{Bouncer:o}=yield import("./chunk-Y3VLFTRL.js");return new o(n)}),e)})}export{a as Bounce,c as loadExternalBounceInteraction};

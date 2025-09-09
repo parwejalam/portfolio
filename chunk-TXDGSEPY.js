@@ -1,0 +1,1 @@
+import{f as t}from"./chunk-EQDQRRRY.js";function n(r,a=!0){return t(this,null,function*(){let e=r,{EmittersSquareShapeGenerator:i}=yield import("./chunk-AMB7B7EL.js");e.addEmitterShapeGenerator?.("square",new i),yield e.refresh(a)})}export{n as loadEmittersShapeSquare};

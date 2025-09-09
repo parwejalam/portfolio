@@ -1,0 +1,1 @@
+import{f as a}from"./chunk-EQDQRRRY.js";function l(t,r=!0){return a(this,null,function*(){yield t.addParticleUpdater("roll",()=>a(null,null,function*(){let{RollUpdater:e}=yield import("./chunk-ITROF67F.js");return new e}),r)})}export{l as loadRollUpdater};

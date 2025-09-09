@@ -1,0 +1,1 @@
+import{a as t}from"./chunk-HKUNN5OK.js";import"./chunk-6FL7R2MJ.js";import"./chunk-EQDQRRRY.js";var s="pause",n=class extends t{constructor(r){super(r),this.handleClickMode=a=>{if(a!==s)return;let e=this.container;e.animationStatus?e.pause():e.play()}}clear(){}init(){}interact(){}isEnabled(){return!0}reset(){}};export{n as Pauser};
