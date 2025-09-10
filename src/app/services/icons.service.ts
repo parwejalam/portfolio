@@ -31,16 +31,16 @@ export class IconsService {
   constructor() { }
 
   socialIcons = [
-    {
-      name: 'facebook',
-      link: 'https://www.facebook.com/profile.php?id=100022510388187',
-      icon: faFacebook,
-    },
-    {
-      name: 'Instagram',
-      link: 'https://www.instagram.com/parwejalam__/',
-      icon: faInstagram,
-    },
+    // {
+    //   name: 'facebook',
+    //   link: 'https://www.facebook.com/profile.php?id=100022510388187',
+    //   icon: faFacebook,
+    // },
+    // {
+    //   name: 'Instagram',
+    //   link: 'https://www.instagram.com/parwejalam__/',
+    //   icon: faInstagram,
+    // },
     {
       name: 'Linkedin',
       link: 'https://www.linkedin.com/in/parwej-alam-3619412b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ',
