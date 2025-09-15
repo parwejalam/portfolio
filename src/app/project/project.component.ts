@@ -111,8 +111,8 @@ export class ProjectComponent implements OnInit {
     },
     {
       id: 10,
-      title: 'Asset Management System (AMS)',
-      description: 'Enterprise-level asset tracking and management system with inventory control and reporting features.',
+      title: 'Attendance Management System (AMS)',
+      description: 'Attendance tracking and management system with employee monitoring and reporting features.',
       technologies: ['Angular', 'TypeScript', 'PostgreSQL', 'Node.js', 'Express'],
       src: 'assets/projects/AMS.png',
       liveLink: '',

@@ -21,7 +21,7 @@ import * as AOS from 'aos';
   ]
 })
 export class AboutComponent implements OnInit, OnDestroy {
-  activeTab: string = 'education';
+  activeTab: string = 'experience';
   currentTheme: 'light' | 'dark' = 'dark';
   private themeSubscription: Subscription = new Subscription();
 
