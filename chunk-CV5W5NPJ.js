@@ -1,1 +1,0 @@
-import{a as t}from"./chunk-67UREWBB.js";import"./chunk-HKUNN5OK.js";import"./chunk-6FL7R2MJ.js";import{f as a}from"./chunk-EQDQRRRY.js";function p(e,o=!0){return a(this,null,function*(){let{TextDrawer:r}=yield import("./chunk-PPV7CXAT.js");yield e.addShape(t,new r,o)})}export{p as loadTextShape};

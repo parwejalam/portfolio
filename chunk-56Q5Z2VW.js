@@ -1,0 +1,1 @@
+import{f as a}from"./chunk-EQDQRRRY.js";function e(r,o=!0){return a(this,null,function*(){yield r.addMover("parallax",()=>a(null,null,function*(){let{ParallaxMover:t}=yield import("./chunk-ZKM7RQQI.js");return new t}),o)})}export{e as loadParallaxMover};

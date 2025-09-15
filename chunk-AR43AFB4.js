@@ -1,0 +1,1 @@
+import{a as t}from"./chunk-WVEE2IGS.js";import"./chunk-F7VIIAWX.js";import"./chunk-FCZ3UZ6C.js";import"./chunk-EQDQRRRY.js";var s=1.66,a=3,c=2,r=class extends t{getCenter(o,e){return{x:-e,y:e/s}}getSidesCount(){return a}getSidesData(o,e){let n=e*c;return{count:{denominator:2,numerator:3},length:n}}};export{r as TriangleDrawer};

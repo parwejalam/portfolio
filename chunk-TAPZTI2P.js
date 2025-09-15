@@ -1,0 +1,1 @@
+import{a as o}from"./chunk-TKJBX5KQ.js";import{f as a}from"./chunk-EQDQRRRY.js";function p(i,t=!0){return a(this,null,function*(){let{EmojiDrawer:e}=yield import("./chunk-UXW3DX5O.js");yield i.addShape(o,new e,t)})}export{p as loadEmojiShape};

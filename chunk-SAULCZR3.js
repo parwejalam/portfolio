@@ -1,1 +1,0 @@
-import{f as o}from"./chunk-EQDQRRRY.js";function n(r,t=!0){return o(this,null,function*(){let{AbsorbersPlugin:e}=yield import("./chunk-K5BXMRZS.js");yield r.addPlugin(new e,t)})}export{n as loadAbsorbersPlugin};

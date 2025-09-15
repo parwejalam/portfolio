@@ -1,0 +1,1 @@
+import{f as t}from"./chunk-EQDQRRRY.js";function e(a,r=!0){return t(this,null,function*(){yield a.addInteractor("particlesAttract",c=>t(null,null,function*(){let{Attractor:n}=yield import("./chunk-5YKREZIL.js");return new n(c)}),r)})}export{e as loadParticlesAttractInteraction};

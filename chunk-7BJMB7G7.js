@@ -1,0 +1,1 @@
+import{a as r}from"./chunk-WVEE2IGS.js";import"./chunk-F7VIIAWX.js";import"./chunk-FCZ3UZ6C.js";import"./chunk-EQDQRRRY.js";var n=3.5,o=2.66,c=3,a=class extends r{getCenter(t,e){return{x:-e/(t.sides/n),y:-e/(o/n)}}getSidesData(t,e){let s=t.sides;return{count:{denominator:1,numerator:s},length:e*o/(s/c)}}};export{a as PolygonDrawer};

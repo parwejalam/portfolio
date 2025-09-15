@@ -1,1 +1,0 @@
-import{f as t}from"./chunk-EQDQRRRY.js";var n=class{constructor(){this.id="links"}getPlugin(e){return t(this,null,function*(){let{LinkInstance:r}=yield import("./chunk-ZWNFDCRO.js");return new r(e)})}loadOptions(){}needsPlugin(){return!0}};export{n as LinksPlugin};

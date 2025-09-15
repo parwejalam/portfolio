@@ -1,0 +1,1 @@
+import{f as t}from"./chunk-EQDQRRRY.js";function r(a,i=!0){return t(this,null,function*(){yield a.addInteractor("particlesCollisions",n=>t(null,null,function*(){let{Collider:o}=yield import("./chunk-6C4IU7B2.js");return new o(n)}),i)})}export{r as loadParticlesCollisionsInteraction};

@@ -1,1 +1,0 @@
-import{f as a}from"./chunk-EQDQRRRY.js";function t(e,o=!0){return a(this,null,function*(){yield e.addMover("base",()=>a(null,null,function*(){let{BaseMover:r}=yield import("./chunk-JQSQEGLR.js");return new r}),o)})}export{t as loadBaseMover};

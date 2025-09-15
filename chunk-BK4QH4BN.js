@@ -1,1 +1,0 @@
-import{f as t}from"./chunk-EQDQRRRY.js";function d(a,r=!0){return t(this,null,function*(){yield a.addParticleUpdater("destroy",e=>t(null,null,function*(){let{DestroyUpdater:o}=yield import("./chunk-MALAXTCT.js");return new o(a,e)}),r)})}export{d as loadDestroyUpdater};

@@ -1,0 +1,1 @@
+import{z as u}from"./chunk-FCZ3UZ6C.js";var e=class{constructor(){this.default=!0,this.groups=[],this.quantity=4}load(t){if(!t)return;t.default!==void 0&&(this.default=t.default),t.groups!==void 0&&(this.groups=t.groups.map(s=>s)),this.groups.length||(this.default=!0);let i=t.quantity;i!==void 0&&(this.quantity=u(i))}};export{e as a};

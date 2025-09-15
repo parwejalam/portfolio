@@ -1,1 +1,0 @@
-import"./chunk-EQDQRRRY.js";var t=new Map,r=class{constructor(e){this._engine=e}addShapeGenerator(e,s){this.getShapeGenerator(e)||t.set(e,s)}getShapeGenerator(e){return t.get(e)}getSupportedShapeGenerators(){return t.keys()}};export{r as ShapeManager};

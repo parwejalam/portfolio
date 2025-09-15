@@ -1,0 +1,1 @@
+import{f as t}from"./chunk-EQDQRRRY.js";function n(a,e=!0){return t(this,null,function*(){yield a.addParticleUpdater("outModes",r=>t(null,null,function*(){let{OutOfCanvasUpdater:d}=yield import("./chunk-GN6JAXOP.js");return new d(r)}),e)})}export{n as loadOutModesUpdater};
