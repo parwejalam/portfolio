@@ -50,8 +50,31 @@
     contain: layout style paint; // CSS containment for better performance
 }
 
+// Particles loading animation
+@keyframes particleShimmer {
+    0% {
+        background-position: 0% 0%;
+        opacity: 0.1;
+    }
+
+    50% {
+        background-position: 100% 100%;
+        opacity: 0.3;
+    }
+
+    100% {
+        background-position: 0% 0%;
+        opacity: 0.1;
+    }
+}
+
+.particles-loading {
+    animation: particleShimmer 3s ease-in-out infinite;
+}
+
 // Ensure content is above particles
-.textContent, .imgContent {
+.textContent,
+.imgContent {
     position: relative;
     z-index: 2;
     pointer-events: auto; // Ensure content is clickable
@@ -114,7 +137,7 @@
         right: 10px;
         padding: 8px;
     }
-    
+
     .particle-select {
         min-width: 100px;
         font-size: 0.75rem;
